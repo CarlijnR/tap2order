@@ -8,10 +8,10 @@ import com.capgemini.tap2order.controller.OrderController;
 @SpringBootApplication
 public class Tap2orderApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Tap2orderApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(Tap2orderApplication.class, args);
 
-	OrderController orderController = new OrderController();
+        OrderController orderController = new OrderController();
         orderController.printOrder();
-}
+    }
 }

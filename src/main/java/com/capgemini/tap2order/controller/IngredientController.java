@@ -2,6 +2,12 @@ package com.capgemini.tap2order.controller;
 
 import com.capgemini.tap2order.model.Ingredient;
 import com.capgemini.tap2order.view.IngredientView;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping ("/api/restaurant/ingredient")
 
 public class IngredientController {
 
@@ -48,6 +54,7 @@ public class IngredientController {
         this.ingredient = ingredient;
     }
 
+    @GetMapping("/list")
     public Ingredient[] getListOfIngredients() {
         return listOfIngredients;
     }

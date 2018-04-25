@@ -5,6 +5,12 @@ import com.capgemini.tap2order.model.MenuItem;
 import com.capgemini.tap2order.model.Order;
 import com.capgemini.tap2order.view.OrderView;
 import com.capgemini.tap2order.model.Drink;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/restaurant/order")
 
 public class OrderController {
 
@@ -24,7 +30,7 @@ public class OrderController {
         calcTotalOrderPrice();
     }
 
-
+    @GetMapping("/print")
     public void printOrder() {
         orderView.printOrderList(this.orderList);
     }
