@@ -1,10 +1,7 @@
 package com.capgemini.tap2order.controller;
 
-import com.capgemini.tap2order.model.Food;
-import com.capgemini.tap2order.model.MenuItem;
-import com.capgemini.tap2order.model.Order;
+import com.capgemini.tap2order.model.*;
 import com.capgemini.tap2order.view.OrderView;
-import com.capgemini.tap2order.model.Drink;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,12 +16,13 @@ public class OrderController {
     private ArrayList<Order> orderList = new ArrayList<Order>();
     private MenuItemController menuItemController = new MenuItemController();
     private OrderView orderView = new OrderView();
-    private int tableId;
+    private Order order;
     private double totalOrderPrice = 0;
     private double orderPrice;
 
 
     public OrderController() {
+
         Order order1 = new Order(6, menuItemController.getListOfMenuItems(), 2);
         Order order2 = new Order(7, menuItemController.getListOfMenuItems2(), 2);
         orderList.add(order1);
@@ -41,7 +39,7 @@ public class OrderController {
 
     public OrderController(ArrayList<Order> orderlist, int tableId) {
         this.orderList = orderList;
-        this.tableId = tableId;
+        tableId = order.getTableId();
 
     }
 
@@ -91,13 +89,7 @@ public class OrderController {
         this.totalOrderPrice = totalOrderPrice;
     }
 
-    public int getTableId() {
-        return tableId;
-    }
 
-    public void setTableId(int tableId) {
-        this.tableId = tableId;
-    }
 }
 
 

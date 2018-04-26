@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Order {
 
     private int orderId;
-    private ArrayList<MenuItem> menuItemList = new ArrayList<>();
-    //private Table tableId;
+    private ArrayList<MenuItem> menuItemList;
+   // private Table tableId;
     private int tableId;
 
 
@@ -46,6 +46,14 @@ public class Order {
         this.tableId = tableId;
     }
 
+    //    public Table getTableId() {
+//        return tableId;
+//    }
+//
+//    public void setTableId(Table tableId) {
+//        this.tableId = tableId;
+//    }
+
     @Override
     public String toString() {
         String wat = "";
@@ -55,8 +63,4 @@ public class Order {
         return wat;
     }
 }
-
-
-//Tried to cast Food and Drink, but this doesn't seem to differ
-// The calculator doesn't work and the Orders aren't printed
 
