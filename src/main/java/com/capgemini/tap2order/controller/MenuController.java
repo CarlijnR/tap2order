@@ -5,10 +5,8 @@ import com.capgemini.tap2order.model.EMenuItem;
 import com.capgemini.tap2order.model.Food;
 import com.capgemini.tap2order.model.MenuItem;
 import com.capgemini.tap2order.model.Drink;
-import com.capgemini.tap2order.view.MenuView;
 
 import java.util.ArrayList;
-
 
 public class MenuController {
 
@@ -32,5 +30,9 @@ public class MenuController {
                 System.out.println("Error: this item is not part of the Menu");
             }
         }
+    }
+
+    public ArrayList<MenuItem> getMenuItems(){
+        return menuItem.getListOfMenuItems();
     }
 }
