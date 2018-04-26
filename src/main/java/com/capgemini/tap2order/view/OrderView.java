@@ -5,6 +5,8 @@ import com.capgemini.tap2order.controller.OrderController;
 import com.capgemini.tap2order.model.MenuItem;
 import com.capgemini.tap2order.model.Order;
 
+import java.util.ArrayList;
+
 
 public class OrderView {
 
@@ -15,7 +17,7 @@ public class OrderView {
         }
     }
 
-    public void printOrderList(Order[] orderList) {
+    public void printOrderList(ArrayList<Order> orderList) {
         OrderController tempCont = new OrderController();
         for (Order currentOrder : orderList) {
 

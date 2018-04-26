@@ -2,23 +2,25 @@ package com.capgemini.tap2order.model;
 
 import com.capgemini.tap2order.model.MenuItem;
 
+import java.util.ArrayList;
+
 public class Menu {
 
-    private MenuItem[] menuItemList;
+
+    private static ArrayList<MenuItem> menuItemList = new ArrayList<>();
 
     //constructor: a menu requires a list of MenuItem
 
-    public Menu(MenuItem[] menuItemList) {
+    public Menu(ArrayList<MenuItem> menuItemList ){
 
         this.menuItemList = menuItemList;
     }
 
-    public MenuItem[] getMenuItemList() {
+    public static ArrayList<MenuItem> getMenuItemList() {
         return menuItemList;
     }
 
-    public void setMenuItemList(MenuItem[] menuItemList) {
-        this.menuItemList = menuItemList;
+    public static void setMenuItemList(ArrayList<MenuItem> menuItemList) {
+        Menu.menuItemList = menuItemList;
     }
-
 }

@@ -1,10 +1,13 @@
 package com.capgemini.tap2order.controller;
 
 import com.capgemini.tap2order.model.Ingredient;
+import com.capgemini.tap2order.model.MenuItem;
 import com.capgemini.tap2order.view.IngredientView;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping ("/api/restaurant/ingredient")
@@ -13,10 +16,10 @@ public class IngredientController {
 
     private IngredientView ingredientView = new IngredientView();
     private Ingredient ingredient;
-    private Ingredient[] listOfIngredients;
+    private static ArrayList<Ingredient> listOfIngredients = new ArrayList<>();
 
 
-    public IngredientController() {
+    public IngredientController(ArrayList<Ingredient> listOfIngredients) {
         Ingredient garlic = new Ingredient(1,"garlic", 100, 2);
         Ingredient salt = new Ingredient(2, "salt", 22, 1);
         Ingredient oil = new Ingredient(3, "oil", 78, 3);
@@ -28,9 +31,14 @@ public class IngredientController {
         Ingredient dough = new Ingredient(9, "dough", 250, 1.1);
         Ingredient pasta = new Ingredient(10, "pasta", 220, 1.3);
 
-        listOfIngredients = new Ingredient[2];
-        listOfIngredients[0] = garlic;
-        listOfIngredients[1] = salt;
+
+        listOfIngredients.add(garlic);
+        listOfIngredients.add(salt);
+        listOfIngredients.add(oil);
+        listOfIngredients.add(cream);
+    }
+
+    public IngredientController() {
 
     }
 
@@ -55,14 +63,16 @@ public class IngredientController {
     }
 
     @GetMapping("/list")
-    public Ingredient[] getListOfIngredients() {
+
+    public static ArrayList<Ingredient> getListOfIngredients() {
         return listOfIngredients;
     }
 
-    public void setListOfIngredients(Ingredient[] listOfIngredients) {
-        this.listOfIngredients = listOfIngredients;
+    public static void setListOfIngredients(ArrayList<Ingredient> listOfIngredients) {
+        IngredientController.listOfIngredients = listOfIngredients;
     }
 }
+
 
 
 

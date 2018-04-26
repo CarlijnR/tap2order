@@ -7,13 +7,15 @@ import com.capgemini.tap2order.model.MenuItem;
 import com.capgemini.tap2order.model.Drink;
 import com.capgemini.tap2order.view.MenuView;
 
+import java.util.ArrayList;
+
 
 public class MenuController {
 
     private MenuItemController menuItem = new MenuItemController();
 
-    public void printListOfMenuItem(MenuItem[] ListOfMenuItemToPrint) {
-        for (MenuItem currentMenuItem : ListOfMenuItemToPrint){
+    public void printListOfMenuItem(ArrayList<MenuItem> listOfMenuItemsToPrint ) {
+        for (MenuItem currentMenuItem : listOfMenuItemsToPrint){
             if(currentMenuItem instanceof Food && currentMenuItem.getItem() == EMenuItem.Starter) {
                 menuItem.showMenuItem();
             }
