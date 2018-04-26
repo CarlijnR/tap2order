@@ -3,6 +3,8 @@ package com.capgemini.tap2order.view;
 import com.capgemini.tap2order.model.MenuItem;
 import com.capgemini.tap2order.controller.IngredientController;
 
+import java.util.ArrayList;
+
 public class MenuItemView {
 
     private IngredientController ingredientController = new IngredientController();
@@ -12,7 +14,7 @@ public class MenuItemView {
         ingredientController.showIngredients();
     }
 
-    public void printListOfMenuItem(MenuItem[] ListOfMenuItemToPrint) {
+    public void printListOfMenuItem(ArrayList<MenuItem> ListOfMenuItemToPrint) {
         for (MenuItem currentMenuItem : ListOfMenuItemToPrint) {
             printMenuItem(currentMenuItem);
         }

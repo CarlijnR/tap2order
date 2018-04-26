@@ -3,17 +3,19 @@ package com.capgemini.tap2order.model;
 
 import com.capgemini.tap2order.model.MenuItem;
 
+import java.util.ArrayList;
+
 //An order is made out of MenuItems. Several orders are combined in the OrderController
 public class Order {
 
     private int orderId;
-    private MenuItem[] menuItemList;
+    private ArrayList<MenuItem> menuItemList = new ArrayList<>();
     //private Table tableId;
     private int tableId;
 
 
     //Todo: for now the Order takes an int tableId, but this needs to be converted to an Table tableId;
-    public Order(int orderId, MenuItem[] menuItemList, int tableId) {
+    public Order(int orderId, ArrayList<MenuItem> menuItemList, int tableId) {
         this.orderId = orderId;
         this.menuItemList = menuItemList;
         this.tableId = tableId;
@@ -28,14 +30,13 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public MenuItem[] getMenuItemList() {
+    public ArrayList<MenuItem> getMenuItemList() {
         return menuItemList;
     }
 
-    public void setMenuItemList(MenuItem[] menuItemList) {
+    public void setMenuItemList(ArrayList<MenuItem> menuItemList) {
         this.menuItemList = menuItemList;
     }
-
 
     public int getTableId() {
         return tableId;
