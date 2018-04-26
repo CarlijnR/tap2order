@@ -29,6 +29,11 @@ public class MenuItemController {
         listOfMenuItems.add(pastaBolognese);
         listOfMenuItems.add(beer);
 
+        listOfMenuItems2.add(soup);
+        listOfMenuItems2.add(tiramisu);
+        listOfMenuItems2.add(water);
+
+
     }
 
 
