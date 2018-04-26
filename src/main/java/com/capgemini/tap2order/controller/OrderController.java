@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 
 @RestController
-@RequestMapping("/api/restaurant/order")
+@RequestMapping("api/restaurant/order")
 
 public class OrderController {
 
@@ -31,9 +31,10 @@ public class OrderController {
         calcTotalOrderPrice();
     }
 
-    @GetMapping("/print")
-    public void printOrder() {
-        orderView.printOrderList(this.orderList);
+
+    @GetMapping("/printOrder")
+    public ArrayList<Order> printOrder() {
+        return this.orderList;
     }
 
 
@@ -43,6 +44,7 @@ public class OrderController {
 
     }
 
+    @GetMapping("/printTotalOrderPrice")
     //Before I had the OrderPrice be calculated out of the prices of the MenuItems, but had them hardcoded
     //this calculator, that takes all the orders together DID work!!!
     public double calcTotalOrderPrice() {
@@ -58,6 +60,7 @@ public class OrderController {
     //method to print the order
     //this does print anything anymore, it did work before.
 
+    @GetMapping ("/printSingleOrderPrice")
     public double calculateOrderPrice() {
         for (MenuItem currentItem : menuItemController.getListOfMenuItems()) {
             if (currentItem instanceof Food) {

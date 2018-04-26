@@ -9,18 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 
-@RestController
-@RequestMapping ("/api/restaurant/ingredient")
-
 public class IngredientController {
 
     private IngredientView ingredientView = new IngredientView();
     private Ingredient ingredient;
-    private static ArrayList<Ingredient> listOfIngredients = new ArrayList<>();
+    private ArrayList<Ingredient> listOfIngredients = new ArrayList<>();
 
 
     public IngredientController(ArrayList<Ingredient> listOfIngredients) {
-        Ingredient garlic = new Ingredient(1,"garlic", 100, 2);
+        Ingredient garlic = new Ingredient(1, "garlic", 100, 2);
         Ingredient salt = new Ingredient(2, "salt", 22, 1);
         Ingredient oil = new Ingredient(3, "oil", 78, 3);
         Ingredient cream = new Ingredient(4, "cream", 60, 55);
@@ -32,17 +29,17 @@ public class IngredientController {
         Ingredient pasta = new Ingredient(10, "pasta", 220, 1.3);
 
 
-        listOfIngredients.add(garlic);
-        listOfIngredients.add(salt);
-        listOfIngredients.add(oil);
-        listOfIngredients.add(cream);
+        this.listOfIngredients.add(garlic);
+        this.listOfIngredients.add(salt);
+        this.listOfIngredients.add(oil);
+        this.listOfIngredients.add(cream);
     }
 
     public IngredientController() {
 
     }
 
-    public void showIngredients(){
+    public void showIngredients() {
         ingredientView.printListOfIngredients(listOfIngredients);
     }
 
@@ -62,14 +59,12 @@ public class IngredientController {
         this.ingredient = ingredient;
     }
 
-    @GetMapping("/list")
-
-    public static ArrayList<Ingredient> getListOfIngredients() {
+    public ArrayList<Ingredient> getListOfIngredients() {
         return listOfIngredients;
     }
 
-    public static void setListOfIngredients(ArrayList<Ingredient> listOfIngredients) {
-        IngredientController.listOfIngredients = listOfIngredients;
+    public void setListOfIngredients(ArrayList<Ingredient> listOfIngredients) {
+        this.listOfIngredients = listOfIngredients;
     }
 }
 

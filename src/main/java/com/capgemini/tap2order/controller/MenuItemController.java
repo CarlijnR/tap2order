@@ -1,14 +1,21 @@
 package com.capgemini.tap2order.controller;
 import com.capgemini.tap2order.model.*;
 import com.capgemini.tap2order.view.MenuItemView;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.util.ArrayList;
+
+@RestController
+@RequestMapping("api/restaurant/menu")
 
 public class MenuItemController {
 
     private MenuItemView menuItemView = new MenuItemView();
     private IngredientController ing = new IngredientController();
-    private ArrayList<MenuItem> listOfMenuItems = new ArrayList<MenuItem>();
-    private ArrayList<MenuItem> listOfMenuItems2 = new ArrayList<MenuItem>();
+    private ArrayList<MenuItem> listOfMenuItems = new ArrayList<>();
+    private ArrayList<MenuItem> listOfMenuItems2 = new ArrayList<>();
     private MenuItem menuItem;
 
 
@@ -28,6 +35,12 @@ public class MenuItemController {
         listOfMenuItems.add(pizza);
         listOfMenuItems.add(pastaBolognese);
         listOfMenuItems.add(beer);
+        listOfMenuItems.add(soup);
+        listOfMenuItems.add(tiramisu);
+        listOfMenuItems.add(ceaserSalad);
+        listOfMenuItems.add(burger);
+        listOfMenuItems.add(fragolo);
+        listOfMenuItems.add(water);
 
         listOfMenuItems2.add(soup);
         listOfMenuItems2.add(tiramisu);
@@ -57,7 +70,7 @@ public class MenuItemController {
         this.ing = ing;
     }
 
-
+    @GetMapping ("/list")
     public ArrayList<MenuItem> getListOfMenuItems() {
         return listOfMenuItems;
     }
