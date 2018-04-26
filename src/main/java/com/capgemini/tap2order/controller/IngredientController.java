@@ -15,28 +15,24 @@ public class IngredientController {
     private Ingredient ingredient;
     private ArrayList<Ingredient> listOfIngredients = new ArrayList<>();
 
+    Ingredient garlic = new Ingredient(1, "garlic", 100, 2);
+    Ingredient salt = new Ingredient(2, "salt", 22, 1);
+    Ingredient oil = new Ingredient(3, "oil", 78, 3);
+    Ingredient cream = new Ingredient(4, "cream", 60, 55);
+    Ingredient meat = new Ingredient(5, "meat", 300, 10);
+    Ingredient tomato = new Ingredient(6, "tomato", 50, 5.5);
+    Ingredient sugar = new Ingredient(7, "sugar", 50, 1.2);
+    Ingredient pepper = new Ingredient(8, "pepper", 5, 0.02);
+    Ingredient dough = new Ingredient(9, "dough", 250, 1.1);
+    Ingredient pasta = new Ingredient(10, "pasta", 220, 1.3);
 
-    public IngredientController(ArrayList<Ingredient> listOfIngredients) {
-        Ingredient garlic = new Ingredient(1, "garlic", 100, 2);
-        Ingredient salt = new Ingredient(2, "salt", 22, 1);
-        Ingredient oil = new Ingredient(3, "oil", 78, 3);
-        Ingredient cream = new Ingredient(4, "cream", 60, 55);
-        Ingredient meat = new Ingredient(5, "meat", 300, 10);
-        Ingredient tomato = new Ingredient(6, "tomato", 50, 5.5);
-        Ingredient sugar = new Ingredient(7, "sugar", 50, 1.2);
-        Ingredient pepper = new Ingredient(8, "pepper", 5, 0.02);
-        Ingredient dough = new Ingredient(9, "dough", 250, 1.1);
-        Ingredient pasta = new Ingredient(10, "pasta", 220, 1.3);
 
+    public IngredientController() {
 
         this.listOfIngredients.add(garlic);
         this.listOfIngredients.add(salt);
         this.listOfIngredients.add(oil);
         this.listOfIngredients.add(cream);
-    }
-
-    public IngredientController() {
-
     }
 
     public void showIngredients() {

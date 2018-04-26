@@ -31,20 +31,20 @@ public class MenuItemController {
         MenuItem fragolo = new Food(9, EMenuItem.Starter, "fragolo", 2, ing.getListOfIngredients());
         MenuItem beer = new Drink(10, EMenuItem.Drink, "beer", 3);
 
-        listOfMenuItems.add(lasagna);
-        listOfMenuItems.add(pizza);
-        listOfMenuItems.add(pastaBolognese);
-        listOfMenuItems.add(beer);
-        listOfMenuItems.add(soup);
-        listOfMenuItems.add(tiramisu);
-        listOfMenuItems.add(ceaserSalad);
-        listOfMenuItems.add(burger);
-        listOfMenuItems.add(fragolo);
-        listOfMenuItems.add(water);
+        this.listOfMenuItems.add(lasagna);
+        this.listOfMenuItems.add(pizza);
+        this.listOfMenuItems.add(pastaBolognese);
+        this.listOfMenuItems.add(beer);
+        this.listOfMenuItems.add(soup);
+        this.listOfMenuItems.add(tiramisu);
+        this.listOfMenuItems.add(ceaserSalad);
+        this.listOfMenuItems.add(burger);
+        this.listOfMenuItems.add(fragolo);
+        this.listOfMenuItems.add(water);
 
-        listOfMenuItems2.add(soup);
-        listOfMenuItems2.add(tiramisu);
-        listOfMenuItems2.add(water);
+        this.listOfMenuItems2.add(soup);
+        this.listOfMenuItems2.add(tiramisu);
+        this.listOfMenuItems2.add(water);
 
 
     }

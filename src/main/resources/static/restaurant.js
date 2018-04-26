@@ -36,14 +36,16 @@ $.get("api/restaurant/menu/list", function(data){
             }
             var string="";
             for(var i=0; i<data.length;i++){
-                string += "<p>" + data[i] + "</p>";
-                console.log(data[i]);
+            console.log(data[i]);
+                string += "<p>" + data[i].name + "- $" + data[i].price;
+
     //            for(var j=0; j<data[i].menuItemList.name;j++){
     //            console.log(data[i].menuItemList.name);
     //            console.log("New Item");
     //        }
             console.log("After");
             }
+            $("#menu").html(string);
 });
 }
 
