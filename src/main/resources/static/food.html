@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html>
+<title>Trial Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+<style>
+    body, html {
+        height: 100%;
+        font-family: "Inconsolata", sans-serif;
+    }
+    .bgimg {
+        background-position: center;
+        background-size: cover;
+        background-image: url("https://bit.ly/2Hu83ja");
+        min-height: 75%;
+    }
+    .menu {
+        display: none;
+    }
+</style>
+<body onload="menuItem()">
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+            <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="menu.html" class="w3-button w3-block w3-black">MENU</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="order.html" class="w3-button w3-block w3-black">MY ORDER</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="#where" class="w3-button w3-block w3-black">Call waiter</a>
+        </div>
+        <div class="w3-col s3">
+            <button id="print">Print Order</button>
+        </div>
+    </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+    </div>
+</header>
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Welcome to the restaurant</span></h5>
+
+            <!-- Please make this menu view pretty, dear Carlijn -->
+
+            <p>View the menu and place your order</p>
+            <p id="menu-page-show"></p>
+        </div>
+        <div class="w3-display-bottom" style="max-width:200px">
+            <button>Order item</button>
+        </div>
+    </div>
+
+    <!-- End page content -->
+</div>
+
+<!-- Footer -->
+
+</footer>
+<script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="food.js"></script>
 </body>
 </html>

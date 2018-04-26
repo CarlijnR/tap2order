@@ -45,8 +45,8 @@ $.get("api/restaurant/menu/list", function(data){
     //        }
             console.log("After");
             }
-            $("#menu").html(string);
+            $("#menu-page-show").html(string);
 });
 }
 
-$("#print").click(menuItem);
+$("#foodbutton").click(menuItem);
