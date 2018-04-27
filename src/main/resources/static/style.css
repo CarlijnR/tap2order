@@ -1,0 +1,57 @@
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    .jumbotron-heading {
+        font-size: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    .jumbotron-heading {
+        font-size: 3.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .jumbotron-heading {
+        font-size: 5em;    
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .jumbotron-heading {
+        font-size: 6em;    
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .jumbotron-heading {
+        font-size: 6em;    
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}    
+
+a:hover {
+    color: lightgray;
+    text-decoration: none;
+} 
+
+.jumbotron {
+    background-image: url("img/cover_background_40.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+

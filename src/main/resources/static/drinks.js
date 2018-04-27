@@ -1,6 +1,6 @@
-$.get("api/restaurant/menu/list/food", function(data){
+$.get("api/restaurant/menu/list/drinks", function(data){
     for(var i=0; i < data.length;i++){
-        $('#foodlist').append(
+        $('#drinklist').append(
             '<tr>' +
             '<td>' + data[i].name + '</td>' +
             '<td>' + data[i].price + '</td>' +

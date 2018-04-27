@@ -23,8 +23,8 @@ public class OrderController {
 
     public OrderController() {
 
-        Order order1 = new Order(6, menuItemController.getListOfMenuItems(), 2);
-        Order order2 = new Order(7, menuItemController.getListOfMenuItems2(), 2);
+        Order order1 = new Order(6, menuItemController.getFoodList(), 2);
+        Order order2 = new Order(7, menuItemController.getDrinkList(), 2);
         orderList.add(order1);
         orderList.add(order2);
         calculateOrderPrice();
@@ -62,7 +62,7 @@ public class OrderController {
 
     @GetMapping ("/printSingleOrderPrice")
     public double calculateOrderPrice() {
-        for (MenuItem currentItem : menuItemController.getListOfMenuItems()) {
+        for (MenuItem currentItem : menuItemController.getFoodList()) {
             if (currentItem instanceof Food) {
                 Food tempFood = (Food) currentItem;
                 orderPrice = tempFood.getPrice() + orderPrice;
