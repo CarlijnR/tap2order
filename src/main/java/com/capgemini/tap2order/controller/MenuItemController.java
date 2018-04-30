@@ -20,25 +20,27 @@ public class MenuItemController {
 
 
     public MenuItemController() {
-        MenuItem soup = new Food(1, EMenuItem.Starter, "soup", 10, ing.getListOfIngredients());
-        MenuItem pizza = new Food(2, EMenuItem.Main, "pizza", 3, ing.getListOfIngredients());
-        MenuItem tiramisu = new Food(3, EMenuItem.Desert, "tiramisu", 8, ing.getListOfIngredients());
-        MenuItem lasagna = new Food(5, EMenuItem.Main, "lasagna", 5, ing.getListOfIngredients());
-        MenuItem pastaBolognese = new Food(6, EMenuItem.Main, "pastaBolognese", 3, ing.getListOfIngredients());
-        MenuItem ceaserSalad = new Food(7, EMenuItem.Starter, "ceaserSalad", 8, ing.getListOfIngredients());
-        MenuItem burger = new Food(8, EMenuItem.Main, "burger", 2, ing.getListOfIngredients());
-        MenuItem fragolo = new Food(9, EMenuItem.Starter, "fragolo", 2, ing.getListOfIngredients());
+        MenuItem soup = new Food(1, EMenuItem.Starter, "Tomato Soup", 4, ing.getListOfIngredients());
+        MenuItem pizza = new Food(2, EMenuItem.Main, "Pizza Verdura", 7, ing.getListOfIngredients());
+        MenuItem tiramisu = new Food(3, EMenuItem.Desert, "Tiramisu", 3, ing.getListOfIngredients());
+        MenuItem lasagna = new Food(5, EMenuItem.Main, "Lasagna", 5, ing.getListOfIngredients());
+        MenuItem pastaBolognese = new Food(6, EMenuItem.Main, "Pasta Bolognese", 7, ing.getListOfIngredients());
+        MenuItem ceaserSalad = new Food(7, EMenuItem.Starter, "Caesar Salad", 4, ing.getListOfIngredients());
+        MenuItem burger = new Food(8, EMenuItem.Main, "Burger", 8.5, ing.getListOfIngredients());
+        MenuItem fragolo = new Food(9, EMenuItem.Starter, "Ice Cream", 2, ing.getListOfIngredients());
 
-        MenuItem beer = new Drink(10, EMenuItem.Drink, "beer", 3);
-        MenuItem water = new Drink(4, EMenuItem.Drink, "water", 2);
+        MenuItem beer = new Drink(10, EMenuItem.Drink, "Beer", 3);
+        MenuItem water = new Drink(4, EMenuItem.Drink, "Water", 2);
+
+        this.foodList.add(soup);
+        this.foodList.add(ceaserSalad);
 
         this.foodList.add(lasagna);
         this.foodList.add(pizza);
         this.foodList.add(pastaBolognese);
-        this.foodList.add(soup);
-        this.foodList.add(tiramisu);
-        this.foodList.add(ceaserSalad);
         this.foodList.add(burger);
+
+        this.foodList.add(tiramisu);
         this.foodList.add(fragolo);
 
         this.drinkList.add(beer);
