@@ -1,76 +1,57 @@
 package com.capgemini.tap2order.controller;
 import com.capgemini.tap2order.model.*;
+import com.capgemini.tap2order.repository.MenuItemRepository;
 import com.capgemini.tap2order.view.MenuItemView;
-import java.util.ArrayList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.Optional;
+
+@RestController
 public class MenuItemController {
 
-    private MenuItemView menuItemView = new MenuItemView();
-    private IngredientController ing = new IngredientController();
-    private ArrayList<MenuItem> listOfMenuItems = new ArrayList<MenuItem>();
-    private ArrayList<MenuItem> listOfMenuItems2 = new ArrayList<MenuItem>();
-    private MenuItem menuItem;
 
+    @Autowired
+    private MenuItemRepository menuItemRepository;
 
-    public MenuItemController() {
-        MenuItem soup = new Food(1, EMenuItem.Starter, "soup", 10, ing.getListOfIngredients());
-        MenuItem pizza = new Food(2, EMenuItem.Main, "pizza", 3, ing.getListOfIngredients());
-        MenuItem tiramisu = new Food(3, EMenuItem.Desert, "tiramisu", 8, ing.getListOfIngredients());
-        MenuItem water = new Drink(4, EMenuItem.Drink, "water", 2);
-        MenuItem lasagna = new Food(5, EMenuItem.Main, "lasagna", 5, ing.getListOfIngredients());
-        MenuItem pastaBolognese = new Food(6, EMenuItem.Main, "pastaBolognese", 3, ing.getListOfIngredients());
-        MenuItem ceaserSalad = new Food(7, EMenuItem.Starter, "ceaserSalad", 8, ing.getListOfIngredients());
-        MenuItem burger = new Food(8, EMenuItem.Main, "burger", 2, ing.getListOfIngredients());
-        MenuItem fragolo = new Food(9, EMenuItem.Starter, "fragolo", 2, ing.getListOfIngredients());
-        MenuItem beer = new Drink(10, EMenuItem.Drink, "beer", 3);
+    @GetMapping("/")
+    public Iterable<MenuItem> getMenuItem(){
+        return menuItemRepository.findAll();
+    }
 
-        listOfMenuItems.add(lasagna);
-        listOfMenuItems.add(pizza);
-        listOfMenuItems.add(pastaBolognese);
-        listOfMenuItems.add(beer);
+    @GetMapping("{/{id}")
+    public MenuItem getMenuItemByID(@PathVariable int id){
+        Optional<MenuItem> menuItem = menuItemRepository.findById(id);
 
-        listOfMenuItems2.add(soup);
-        listOfMenuItems2.add(tiramisu);
-        listOfMenuItems2.add(water);
+        if(menuItem.isPresent()){
+            return menuItem.get();
+        }
+        return null;
+    }
 
+    @GetMapping("/add/food/{name}/{price}")
+    public MenuItem addFoodItem(@PathVariable String name, @PathVariable double price){
+        MenuItem food = new Food();
+        food.setName(name);
+        food.setPrice(price);
 
+        return menuItemRepository.save(food);
+    }
+
+    @GetMapping("/add/drink/{name}/{price}")
+    public MenuItem addDrinkItem(@PathVariable String name, @PathVariable double price){
+        MenuItem drink = new Drink();
+        drink.setName(name);
+        drink.setPrice(price);
+
+        return menuItemRepository.save(drink);
     }
 
 
-    public void showMenuItem() {
-        menuItemView.printListOfMenuItem(listOfMenuItems);
-    }
-
-    public MenuItemView getMenuItemView() {
-        return menuItemView;
-    }
-
-    public void setMenuItemView(MenuItemView menuItemView) {
-        this.menuItemView = menuItemView;
-    }
-
-    public IngredientController getIng() {
-        return ing;
-    }
-
-    public void setIng(IngredientController ing) {
-        this.ing = ing;
-    }
 
 
-    public ArrayList<MenuItem> getListOfMenuItems() {
-        return listOfMenuItems;
-    }
 
-    public void setListOfMenuItems(ArrayList<MenuItem> listOfMenuItems) {
-        this.listOfMenuItems = listOfMenuItems;
-    }
-
-    public ArrayList<MenuItem> getListOfMenuItems2() {
-        return listOfMenuItems2;
-    }
-
-    public void setListOfMenuItems2(ArrayList<MenuItem> listOfMenuItems2) {
-        this.listOfMenuItems2 = listOfMenuItems2;
-    }
 }

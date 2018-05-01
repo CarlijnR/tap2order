@@ -11,7 +11,7 @@ public class Tap2orderApplication {
     public static void main(String[] args) {
         SpringApplication.run(Tap2orderApplication.class, args);
 
-        OrderController orderController = new OrderController();
-        orderController.printOrder();
+//        OrderController orderController = new OrderController();
+//        orderController.printOrder();
     }
 }

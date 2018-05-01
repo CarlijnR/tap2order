@@ -1,12 +1,20 @@
 package com.capgemini.tap2order.model;
 
+import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.util.List;
+
+@Entity
+@Data
 public class Drink extends MenuItem {
 
-    //The Drink class inherits from the Menu item
-
-    public Drink(int newId, EMenuItem newItem, String newName, double newPrice) {
-        super(newId, newItem, newName, newPrice);
-    }
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String name;
+    private double price;
 }

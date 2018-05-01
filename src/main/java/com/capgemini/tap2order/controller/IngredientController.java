@@ -1,76 +1,57 @@
 package com.capgemini.tap2order.controller;
 
 import com.capgemini.tap2order.model.Ingredient;
-import com.capgemini.tap2order.model.MenuItem;
-import com.capgemini.tap2order.view.IngredientView;
+import com.capgemini.tap2order.repository.IngredientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
+import java.util.Optional;
+
 
 @RestController
-@RequestMapping ("/api/restaurant/ingredient")
-
 public class IngredientController {
 
-    private IngredientView ingredientView = new IngredientView();
-    private Ingredient ingredient;
-    private static ArrayList<Ingredient> listOfIngredients = new ArrayList<>();
 
+    @Autowired
+    private IngredientRepository ingredientRepository;
 
-    public IngredientController(ArrayList<Ingredient> listOfIngredients) {
-        Ingredient garlic = new Ingredient(1,"garlic", 100, 2);
-        Ingredient salt = new Ingredient(2, "salt", 22, 1);
-        Ingredient oil = new Ingredient(3, "oil", 78, 3);
-        Ingredient cream = new Ingredient(4, "cream", 60, 55);
-        Ingredient meat = new Ingredient(5, "meat", 300, 10);
-        Ingredient tomato = new Ingredient(6, "tomato", 50, 5.5);
-        Ingredient sugar = new Ingredient(7, "sugar", 50, 1.2);
-        Ingredient pepper = new Ingredient(8, "pepper", 5, 0.02);
-        Ingredient dough = new Ingredient(9, "dough", 250, 1.1);
-        Ingredient pasta = new Ingredient(10, "pasta", 220, 1.3);
-
-
-        listOfIngredients.add(garlic);
-        listOfIngredients.add(salt);
-        listOfIngredients.add(oil);
-        listOfIngredients.add(cream);
+    @GetMapping("/")
+    public Iterable<Ingredient> getIngredient(){
+        return ingredientRepository.findAll();
     }
 
-    public IngredientController() {
+    @GetMapping("{/{id}")
+    public Ingredient getIngredientByID(@PathVariable int id){
+        Optional<Ingredient> ingredient = ingredientRepository.findById(id);
 
+        if(ingredient.isPresent()){
+            return ingredient.get();
+        }
+        return null;
     }
 
-    public void showIngredients(){
-        ingredientView.printListOfIngredients(listOfIngredients);
+
+    @GetMapping("/add/{name}/{grams}/{price}")
+    public Ingredient addIngredient(@PathVariable String name, @PathVariable int grams,@PathVariable double price){
+        Ingredient ingredient = new Ingredient();
+        ingredient.setIngredientName(name);
+        ingredient.setIngredientGrams(grams);
+        ingredient.setIngredientPrice(price);
+        return ingredientRepository.save(ingredient);
     }
 
-    public IngredientView getIngredientView() {
-        return ingredientView;
+    @GetMapping("/add/{id}/{name}/{grams}/{price}")
+    public Ingredient updateIngredient(@PathVariable int id, @PathVariable String name, @PathVariable int grams, @PathVariable int price){
+        Ingredient ingredient = new Ingredient();
+        ingredient.setIngredientId(id);
+        ingredient.setIngredientName(name);
+        ingredient.setIngredientGrams(grams);
+        ingredient.setIngredientPrice(price);
+        return ingredientRepository.save(ingredient);
     }
 
-    public void setIngredientView(IngredientView ingredientView) {
-        this.ingredientView = ingredientView;
-    }
-
-    public Ingredient getIngredient() {
-        return ingredient;
-    }
-
-    public void setIngredient(Ingredient ingredient) {
-        this.ingredient = ingredient;
-    }
-
-    @GetMapping("/list")
-
-    public static ArrayList<Ingredient> getListOfIngredients() {
-        return listOfIngredients;
-    }
-
-    public static void setListOfIngredients(ArrayList<Ingredient> listOfIngredients) {
-        IngredientController.listOfIngredients = listOfIngredients;
-    }
 }
 
 
