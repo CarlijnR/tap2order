@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Drink extends MenuItem {
+public class Drink {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

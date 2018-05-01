@@ -10,14 +10,14 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public abstract class MenuItem {
+public class MenuItem {
     //Parent class for Food and Drink
     //is abstract because a MenuItem is never instantiated in reality
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String name;
-    private double price;
+    private int menuItemId;
+    private String menuItemName;
+    private double menuItemPrice;
 
 }

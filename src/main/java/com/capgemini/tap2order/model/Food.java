@@ -12,7 +12,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class Food extends MenuItem {
+public class Food{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
