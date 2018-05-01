@@ -18,7 +18,6 @@ public abstract class MenuItem {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
-    private EMenuItem item;
     private double price;
 
 }

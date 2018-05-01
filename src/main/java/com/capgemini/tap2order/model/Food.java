@@ -19,6 +19,5 @@ public class Food extends MenuItem {
     private int id;
     private String name;
     private double price;
-    private List<Ingredient> ingredients;
 
 }

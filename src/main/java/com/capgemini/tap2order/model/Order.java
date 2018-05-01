@@ -9,15 +9,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.ArrayList;
-
-@Entity
-@Data
+//
+//@Entity
+//@Data
 public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int orderId;
-    private ArrayList<MenuItem> menuItemList;
-    private Table tableId;
 }
 
