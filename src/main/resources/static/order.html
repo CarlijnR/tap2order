@@ -1,66 +1,230 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<title>Trial Menu</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<style>
-    body, html {
-        height: 100%;
-        font-family: "Inconsolata", sans-serif;
-    }
-    .bgimg {
-        background-position: center;
-        background-size: cover;
-        background-image: url("https://bit.ly/2Hu83ja");
-        min-height: 75%;
-    }
-    .menu {
-        display: none;
-    }
-</style>
-<body>
 
-<!-- Links (sit on top) -->
-<div class="w3-top">
-    <div class="w3-row w3-padding w3-black">
-        <div class="w3-col s3">
-            <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
+<head>
+    <title>
+        Tap2Order
+    </title>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-dark">
+<div class="bg-light">
+    <nav class="navbar navbar-light navbar-expand-lg bg-dark">
+        <a class="navbar-brand text-light">
+            Logo
+            <img src="img/icon_restaurant_white.png" width="50" height="50">
+        </a>
+        <button class="btn navbar-toggler bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto text-center">
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=index.html>Home</a>
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=menu.html>Menu</a>
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=order.html>My order</a>
+                <a class="nav-item">
+                    <button class="btn btn-dark text-warning ml-2 mr-2">
+                        Call waiter
+                        <img src="img/icon_waiter_white.png" width="20" height="20" ;>
+                    </button>
+                </a>
+            </div>
         </div>
-        <div class="w3-col s3">
-            <a href="menu.html" class="w3-button w3-block w3-black">MENU</a>
+    </nav>
+
+    <section class="jumbotron text-center text-light">
+        <div class="container">
+            <h1 class="jumbotron-heading">Restaurant name</h1>
         </div>
-        <div class="w3-col s3">
-            <a href="order.html" class="w3-button w3-block w3-black">MY ORDER</a>
+    </section>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h4>Your current table order</h4>
+                </div>
+            </div>
         </div>
-        <div class="w3-col s3">
-            <a href="#where" class="w3-button w3-block w3-black">CALL WAITER</a>
+        <div class="container">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" width="25%">Dish</th>
+                            <th scope="col" width="25%">Discription</th>
+                            <th scope="col" width="25%">Amount</th>
+                            <th scope="col" width="25%">Price</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="h5">Pizza Verdura</td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                                porttitor eu, consequat vitae, eleifend ac, enim.
+                                <button class="btn btn-grey btn-sm">See ingredients</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-grey btn-sm">
+                                    -
+                                </button>
+                                2
+                                <button class="btn btn-grey btn-sm">
+                                    +
+                                </button>
+                            </td>
+                            <td>&euro; 12</td>
+                        </tr>
+                        <tr>
+                            <td class="h5">Tiramisu</td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                                porttitor eu, consequat vitae, eleifend ac, enim.
+                                <button class="btn btn-grey btn-sm">See ingredients</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-grey btn-sm">
+                                    -
+                                </button>
+                                2
+                                <button class="btn btn-grey btn-sm">
+                                    +
+                                </button>
+                            </td>
+                            <td>&euro; 16</td>
+                        </tr>
+                        <tr>
+                            <td class="h5">Water</td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                                porttitor eu, consequat vitae, eleifend ac, enim.
+                                <button class="btn btn-grey btn-sm">See ingredients</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-grey btn-sm">
+                                    -
+                                </button>
+                                2
+                                <button class="btn btn-grey btn-sm">
+                                    +
+                                </button>
+                            </td>
+                            <td>&euro; 4</td>
+                        </tr>
+                        <tr>
+                            <td class="h5">Beer</td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                                porttitor eu, consequat vitae, eleifend ac, enim.
+                                <button class="btn btn-grey btn-sm">See ingredients</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-grey btn-sm">
+                                    -
+                                </button>
+                                2
+                                <button class="btn btn-grey btn-sm">
+                                    +
+                                </button>
+                            </td>
+                            <td>&euro; 3</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="font-weight-bold">
+                                Tip: <input class="form-control col-md-4" type="text" placeholder="(optional)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="font-weight-bold">
+                                Total &euro; 29
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto mb-3 mt-3">
+                    <button class="btn btn-warning mt-1" type="button">
+                        <p>
+                            <a href="drinks.html" class="text-dark">
+                                <h6 class="menudrinks">Back to Drinks</h6>
+                                <img src="img/icon_drink.png" width="30" height="30">
+                            </a>
+                        </p>
+                    </button>
+                    <button class="btn btn-warning ml-1 mr-1 mt-1" type="button">
+                        <p>
+                            <a href="food.html" class="text-dark">
+                                <h6 class="menufood">Back to Food</h6>
+                                <img src="img/icon_food.png" width="30" height="30">
+                            </a>
+                        </p>
+                    </button>
+                    <button class="btn btn-warning mt-1" type="button">
+                        <p>
+                            <a href="food.html" class="text-dark">
+                                <h6 class="payment">I would like to pay</h6>
+                                <img src="img/icon_bill.png" width="30" height="30">
+                            </a>
+                        </p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+<footer class="page-footer font-small pt-4 mt-3 bg-dark">
+    <!--Footer Links-->
+    <div class="container">
+        <div class="row">
+            <!--First column-->
+            <div class="col-6 text-center">
+                <h6 class="text-light pb-2">Find "Restaurant name" on</h6>
+                <p>
+                    <a href="https://twitter.com/hashtag/restaurant" class="ml-2">
+                        <img src="img/icon_twitter_white.png" width="30" height="30">
+                    </a>
+                    <a href="https://www.instagram.com/explore/tags/restaurant/">
+                        <img src="img/icon_instagram_white.png" width="30" height="30">
+                    </a>
+                </p>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-6 text-center">
+                <h6 class="text-light pb-2">Stay updated</h6>
+                <button class="btn btn-warning mr-2">
+                    Newsletter >
+                </button>
+            </div>
+            <!--/.Second column-->
+        </div>
+
+        <div class="row">
+            <div class="col-12 py-3 text-center text-light">
+                &copy; 2018 Copyright: Pega+.org
+            </div>
         </div>
     </div>
+</footer>
+
 </div>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
 
-<!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-    </div>
-    <div class="w3-display-bottomright w3-center w3-padding-large">
-    </div>
-</header>
-
-<!-- Add a background color and large text to the whole page -->
-<div class="w3-sand w3-grayscale w3-large">
-
-    <!-- About Container -->
-    <div class="w3-container" id="order">
-        <div class="w3-content" style="max-width:700px">
-            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Current order</span></h5>
-            <h2>Food</h2>
-            <p>Tiramisu</p>
-            <h2>Drinks</h2>
-            <p>Coca Cola Zero</p>
-        </div>
-    </div>
-
-    <!-- End page content -->
-</div>
+</html>

@@ -1,21 +1,52 @@
-function order()
-{
-$.get("/api/restaurant/order/print",function(data){
-    alert(data);
-})
-}
-function ingredient(e)
+
+function printOrder(e)
 {
 e.preventDefault();
-        $.get("/api/restaurant/ingredient/list", function(data){
+        $.get("/api/restaurant/order/printOrder", function(data){
         console.log("Enters this shit");
+        if (data.length<=0)
+        {
+           console.log("empty output");
+            return;
+        }
         var string="";
         for(var i=0; i<data.length;i++){
-            string += data[i].ingredientName
-        }
-        alert(data);
+            string += "<p>" + data[i] + "</p>";
+            console.log(data[i]);
+//            for(var j=0; j<data[i].menuItemList.name;j++){
+//            console.log(data[i].menuItemList.name);
+//            console.log("New Item");
+//        }
+        console.log("After");
+
+
+}
 });
 }
 
+function menuItem(b)
+{
+b.preventDefault();
+$.get("api/restaurant/menu/list", function(data){
+    console.log("Checking this list");
+            if (data.length<=0)
+            {
+               console.log("empty list");
+               return;
+            }
+            var string="";
+            for(var i=0; i<data.length;i++){
+            console.log(data[i]);
+                string += "<p>" + data[i].name + "- $" + data[i].price;
 
-$("#print").click(ingredient);
+    //            for(var j=0; j<data[i].menuItemList.name;j++){
+    //            console.log(data[i].menuItemList.name);
+    //            console.log("New Item");
+    //        }
+            console.log("After");
+            }
+            $("#menu-page-show").html(string);
+});
+}
+
+$("#foodbutton").click(menuItem);
