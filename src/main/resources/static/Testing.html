@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<form id="saveForm">
+    Name: <input type="text" id="name" required><br/>
+    Grams: <input type="text" id="grams" required><br/>
+    Price: <input type="text" id="price" required><br/>
+
+    <button id="submit">Add an ingredient</button>
+</form>
+<br/>
+<ingredients id="ingredients">No ingredients</ingredients>
+<br/>
+
+<form id="saveMenuItem">
+    Name: <input type="text" id="nameMenuItem" required><br/>
+    Price: <input type="text" id="priceMenuItem" required><br/>
+    <button id="submitMenuItem">Add a menu item</button>
+</form>
+
+<br/>
+<ingredients id="menuItem">No menu item</ingredients>
+<br/>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="ingredient.js"></script>
+</body>
+</html>
