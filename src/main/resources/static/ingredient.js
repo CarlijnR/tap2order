@@ -1,10 +1,16 @@
 function getIngredients(){
     $.get("/api/ingredient/", function(data){
-    if(data.length<=0){return;}
-    var html = "";
-    for(var i=0;i<data.length;i++){
-    html +="<p>" + data[i].ingredientName + " - " + data[i].ingredientGrams + " - " + data[i].ingredientPrice}
-    $("#ingredients").html(html);
+        if(data.length<=0){return;}
+        $('#ingredients').empty();
+        for(var i=0;i<data.length;i++) {
+            $('#ingredients').append(
+            '<tr>' +
+                '<td>' + data[i].ingredientName + '</td>' +
+                '<td>' + data[i].ingredientGrams + '</td>' +
+                '<td>' + data[i].ingredientPrice + '</td>' +
+            '<tr>'
+            );
+        }
     });
 }
 
