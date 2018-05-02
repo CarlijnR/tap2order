@@ -41,8 +41,26 @@
                 <div>
                     <h2 class="m-3 slogan">Menu</h2>
                     <p class="ml-3 mr-3">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
-                        porttitor eu, consequat vitae, eleifend ac, enim.
+                    <form id="saveMenuItem">
+                        Name: <input type="text" id="nameMenuItem" required><br/>
+                        Price: <input type="text" id="priceMenuItem" required><br/>
+                        <button id="submitMenuItem">Add a menu item</button>
+                    </form>
+
+                    <br/>
+                    <ingredients id="menuItem">No menu item</ingredients>
+                    <br/>
+
+                    <form id="saveDrink">
+                        Name: <input type="text" id="nameDrink" required><br/>
+                        Price: <input type="text" id="priceDrink" required><br/>
+
+                        <button id="submitDrink">Add a drink</button>
+                    </form>
+                    <br/>
+                    <drinks id="drinksText">No drinks</drinks>
+                    <br/>
+
                     </p>
                 </div>
             </div>
@@ -86,8 +104,10 @@
     </footer>
 
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="food.js"></script>
+<script src="drinks.js"></script>
 </body>
-
 </html>

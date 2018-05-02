@@ -13,7 +13,7 @@ public class Drink {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String name;
-    private double price;
+    private int drinkId;
+    private String drinkName;
+    private double drinkPrice;
 }
