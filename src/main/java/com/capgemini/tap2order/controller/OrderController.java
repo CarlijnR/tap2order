@@ -12,24 +12,8 @@ import java.util.ArrayList;
 @RequestMapping("/api/restaurant/order")
 public class OrderController {
 
-//    private ArrayList<Order> orderList = new ArrayList<Order>();
-//    private MenuItemController menuItemController = new MenuItemController();
-//    private OrderView orderView = new OrderView();
-//    private Order order;
-//    private double totalOrderPrice = 0;
-//    private double orderPrice;
-//
-//
-//    public OrderController() {
-//
-//        Order order1 = new Order(6, menuItemController.getListOfMenuItems(), 2);
-//        Order order2 = new Order(7, menuItemController.getListOfMenuItems2(), 2);
-//        orderList.add(order1);
-//        orderList.add(order2);
-//        calculateOrderPrice();
-//        calcTotalOrderPrice();
-//    }
-//
+    private ArrayList<Order> orders;
+
 //    @GetMapping("/print")
 //    public void printOrder() {
 //        orderView.printOrderList(this.orderList);
