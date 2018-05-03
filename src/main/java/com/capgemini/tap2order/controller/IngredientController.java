@@ -22,20 +22,28 @@ public class IngredientController {
     private IngredientRepository ingredientRepository;
 
     @GetMapping("/")
-    public Iterable<Ingredient> getIngredient(){
+    public Iterable<Ingredient> getIngredient() {
         return ingredientRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public Ingredient getIngredientByID(@PathVariable int id){
+    public Ingredient getIngredientByID(@PathVariable int id) {
         Optional<Ingredient> ingredient = ingredientRepository.findById(id);
 
-        if(ingredient.isPresent()){
+        if (ingredient.isPresent()) {
             return ingredient.get();
         }
         return null;
     }
 
+    @PostMapping("/add")
+    public Ingredient registerIngredient(@RequestBody Ingredient ingredient) {
+        System.out.println(ingredient);
+        ingredients.add(ingredient);
+        return ingredientRepository.save(ingredient);
+    }
+
+}
 
 //    @GetMapping("/add/{name}/{grams}/{price}")
 //    public Ingredient addIngredient(@PathVariable String name, @PathVariable int grams,@PathVariable double price){
@@ -51,17 +59,10 @@ public class IngredientController {
 //        ingredientRepository.deleteById(id);
 //    }
 
-    @PostMapping("/add")
-    public Ingredient registerIngredient(@RequestBody Ingredient ingredient){
-        System.out.println(ingredient);
-        ingredients.add(ingredient);
-        return ingredientRepository.save(ingredient);
-    }
 
 //    @GetMapping("/")
 //    public ArrayList<Ingredient> getAllIngredients()
 //    {return ingredients;}
-}
 
 
 

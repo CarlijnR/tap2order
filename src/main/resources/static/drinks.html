@@ -42,19 +42,25 @@
     </section>
 
     <div>
+
         <div class="container">
-            <div class="row mb-5">
-                <table id="drinklist" class="table table-bordered">
-                    <thead>
-                    <td>Description</td>
-                    <td>Price</td>
-                    <br/>
-                    <button onclick="getDrinkItems()">Click to list all drink items</button>
-                    <drinks id="drinksText">No drinks</drinks>
-                    <br/>
-                    <td></td>
-                    </thead>
-                </table>
+            <div class="row mt-2">
+                <h6 class="mx-auto">List of Drinks</h6>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table class="table" id="drinks">
+                        <thead>
+                        <tr>
+                            <th scope="col" width="40%">Name</th>
+
+                            <th scope="col" width="30%">Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="col-6 text-center">
                     <a href="food.html" class="btn btn-warning text-dark">
                         <h5 class="menufood">Go to Food</h5>

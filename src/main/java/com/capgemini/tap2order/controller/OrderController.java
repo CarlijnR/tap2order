@@ -1,78 +1,75 @@
-//package com.capgemini.tap2order.controller;
+package com.capgemini.tap2order.controller;
+
+import com.capgemini.tap2order.model.*;
+
+import com.capgemini.tap2order.repository.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+
+@RestController
+@RequestMapping("/api/restaurant/order")
+public class OrderController {
+
+    private ArrayList<Order> orders;
+
+
+    @Autowired
+    private OrderRepository orderRepository;
+
+    @GetMapping("/")
+    public Iterable<Order> getOrders() {
+        return orderRepository.findAll();
+    }
+
+}
+
+//    public double calcTotalOrderPrice() {
+//        totalOrderPrice = 0;
+//        for (Order currentOrder : orderList) {
+//            for (MenuItem item : currentOrder.getMenuItemList()) {
+//                totalOrderPrice = totalOrderPrice + item.getPrice();
+//            }
+//        }
+//        return totalOrderPrice;
+//    }
+
+
+//    public double calculateOrderPrice() {
+//        for (MenuItem currentItem : menuItemController.getListOfMenuItems()) {
+//            if (currentItem instanceof Food) {
+//                Food tempFood = (Food) currentItem;
+//                orderPrice = tempFood.getPrice() + orderPrice;
+//            }
+//            if (currentItem instanceof Drink) {
+//                Drink temDrink = (Drink) currentItem;
+//                orderPrice = temDrink.getPrice() + orderPrice;
+//            }
+//        }
+//        return orderPrice;
+//    }
+
 //
-//import com.capgemini.tap2order.model.*;
-//import com.capgemini.tap2order.view.OrderView;
-//import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RestController;
+//    public ArrayList<Order> getOrderList() {
+//        return orderList;
+//    }
 //
-//import java.util.ArrayList;
+//    public void setOrderList(ArrayList<Order> orderList) {
+//        this.orderList = orderList;
+//    }
 //
-//@RestController
-//@RequestMapping("/api/restaurant/order")
-//public class OrderController {
+//    public double getTotalOrderPrice() {
+//        return totalOrderPrice;
+//    }
 //
-//    private ArrayList<Order> orders;
-//
-////    @GetMapping("/print")
-////    public void printOrder() {
-////        orderView.printOrderList(this.orderList);
-////    }
-////
-////
-////    public OrderController(ArrayList<Order> orderlist, int tableId) {
-////        this.orderList = orderList;
-////        tableId = order.getTableId();
-////
-////    }
-////
-////    //Before I had the OrderPrice be calculated out of the prices of the MenuItems, but had them hardcoded
-////    //this calculator, that takes all the orders together DID work!!!
-////    public double calcTotalOrderPrice() {
-////        totalOrderPrice = 0;
-////        for (Order currentOrder : orderList) {
-////            for (MenuItem item : currentOrder.getMenuItemList()) {
-////                totalOrderPrice = totalOrderPrice + item.getPrice();
-////            }
-////        }
-////        return totalOrderPrice;
-////    }
-////
-////    //method to print the order
-////    //this does print anything anymore, it did work before.
-////
-////    public double calculateOrderPrice() {
-////        for (MenuItem currentItem : menuItemController.getListOfMenuItems()) {
-////            if (currentItem instanceof Food) {
-////                Food tempFood = (Food) currentItem;
-////                orderPrice = tempFood.getPrice() + orderPrice;
-////            }
-////            if (currentItem instanceof Drink) {
-////                Drink temDrink = (Drink) currentItem;
-////                orderPrice = temDrink.getPrice() + orderPrice;
-////            }
-////        }
-////        return orderPrice;
-////    }
-////
-////
-////    public ArrayList<Order> getOrderList() {
-////        return orderList;
-////    }
-////
-////    public void setOrderList(ArrayList<Order> orderList) {
-////        this.orderList = orderList;
-////    }
-////
-////    public double getTotalOrderPrice() {
-////        return totalOrderPrice;
-////    }
-////
-////    public void setTotalOrderPrice(double totalOrderPrice) {
-////        this.totalOrderPrice = totalOrderPrice;
-////    }
-//
-//
-//}
-//
-//
+//    public void setTotalOrderPrice(double totalOrderPrice) {
+//        this.totalOrderPrice = totalOrderPrice;
+//    }
+
+
+
+
+
