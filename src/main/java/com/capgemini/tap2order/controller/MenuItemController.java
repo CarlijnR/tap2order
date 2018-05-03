@@ -51,7 +51,7 @@ public class MenuItemController {
 //    }
 
     @PostMapping("/add")
-    public MenuItem registerMenuItem(MenuItem menuItem){
+    public MenuItem registerMenuItem(@RequestBody MenuItem menuItem){
         System.out.println(menuItem);
         menuitems.add(menuItem);
         return menuItemRepository.save(menuItem);

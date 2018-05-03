@@ -65,7 +65,7 @@ function postDataFood() {
         type:"post",
         data: validJsonFood,
         contentType: "application/json",
-        success: function(result2) {
+        success: function(result) {
             // On successful post, reload data to get the added one as well.
             console.log("success post data!");
             getDataFood();
@@ -78,7 +78,7 @@ function getDataFood() {
 
     // Get the data from endpoint.
     $.ajax({
-        url:"/api/menuItem",
+        url:"/api/menuItem/",
         type:"get",
         success: function(foods) {
             // On successful get, reload the datatable with new data.

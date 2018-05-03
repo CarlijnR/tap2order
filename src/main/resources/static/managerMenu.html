@@ -108,6 +108,7 @@
             <h6 class="mx-auto">Current dishes</h6>
         </div>
         <div class="row">
+            <div class="col-12">
             <table class="table" id="menuItem">
                 <thead>
                 <tr>
@@ -118,6 +119,7 @@
                 <tbody>
                 </tbody>
             </table>
+            </div>
         </div>
 
 
@@ -148,15 +150,15 @@
                         <div class="row">
                             <form class="col-md-12" id="saveDrink" onsubmit="return false;">
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                                    <label for="nameDrink" class="col-sm-2 col-form-label">Name:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="name" required>
+                                        <input type="text" class="form-control" id="nameDrink" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="price" class="col-sm-2 col-form-label">Price:</label>
+                                    <label for="priceDrink" class="col-sm-2 col-form-label">Price:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="price" required>
+                                        <input type="number" class="form-control" id="priceDrink" required>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-secondary" id="submitDrink">Add a drink</button>
@@ -196,16 +198,18 @@
             <h6 class="mx-auto">Current drinks</h6>
         </div>
         <div class="row">
-            <table class="table" id="drinksText">
-                <thead>
-                <tr>
-                    <th scope="col" width="40%">Name</th>
-                    <th scope="col" width="30%">Price</th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div class="col-12">
+                <table class="table" id="drinksText">
+                    <thead>
+                    <tr>
+                        <th scope="col" width="40%">Name</th>
+                        <th scope="col" width="30%">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -248,15 +252,14 @@
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<!--<script src="food.js"></script>-->
+<script src="food.js"></script>
 <script src="drinks.js"></script>
 <script>
     $(document).ready(function () {
         console.log("tadaa");
+        setupFood();
         setupDrink();
     });
-
-
 </script>
 
 </body>
