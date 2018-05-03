@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/menuItem/")
+@RequestMapping("/api/menuItem")
 public class MenuItemController {
 
     private static ArrayList<MenuItem> menuitems = new ArrayList<>();

@@ -40,7 +40,7 @@
 //$("#saveMenuItem").submit(saveMenuItems);
 
 
-function postData() {
+function postDataFood() {
     console.log("posting data...");
 
     // Get values from html.
@@ -65,38 +65,38 @@ function postData() {
         type:"post",
         data: validJsonFood,
         contentType: "application/json",
-        success: function(result) {
+        success: function(result2) {
             // On successful post, reload data to get the added one as well.
             console.log("success post data!");
-            getData();
+            getDataFood();
         }
     });
 }
 
-function getData() {
+function getDataFood() {
     console.log("getting data...");
 
     // Get the data from endpoint.
     $.ajax({
-        url:"/api/menuItem/",
+        url:"/api/menuItem",
         type:"get",
         success: function(foods) {
             // On successful get, reload the datatable with new data.
             console.log("This is the data: " + foods);
-            $('#ingredients').DataTable().clear();
-            $('#ingredients').DataTable().rows.add(ingredients);
-            $('#ingredients').DataTable().columns.adjust().draw();
+            $('#menuItem').DataTable().clear();
+            $('#menuItem').DataTable().rows.add(foods);
+            $('#menuItem').DataTable().columns.adjust().draw();
         }
     });
 }
 
-function setup() {
+function setupFood() {
     // Modal submit.
     $("#saveFood").on('submit', function(e) {
         console.log("Submitted new menu item form");
 
         // Post the data from the modal.
-        postData();
+        postDataFood();
 
         // Reset modal to hide and no values.
         $('#newFoodModal').modal('hide');
@@ -105,7 +105,7 @@ function setup() {
     });
 
     // Load DataTable with data format.
-    $('#foods').DataTable({
+    $('#menuItem').DataTable({
         columns: [
             { "data": "menuItemName" },
             { "data": "menuItemPrice" }
@@ -113,5 +113,5 @@ function setup() {
     });
 
     // Load first data.
-    getData();
+    getDataFood();
 }

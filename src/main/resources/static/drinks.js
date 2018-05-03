@@ -56,7 +56,7 @@
 //
 //$("#saveDrink").submit(saveDrinkItems);
 
-function postData() {
+function postDataDrink() {
     console.log("posting data...");
 
     // Get values from html.
@@ -81,15 +81,15 @@ function postData() {
         type:"post",
         data: validJsonDrink,
         contentType: "application/json",
-        success: function(result) {
+        success: function(result3) {
             // On successful post, reload data to get the added one as well.
             console.log("success post data!");
-            getData();
+            getDataDrink();
         }
     });
 }
 
-function getData() {
+function getDataDrink() {
     console.log("getting data...");
 
     // Get the data from endpoint.
@@ -99,29 +99,32 @@ function getData() {
         success: function(drinks) {
             // On successful get, reload the datatable with new data.
             console.log("This is the data: " + drinks);
-            $('#drinks').DataTable().clear();
-            $('#drinks').DataTable().rows.add(ingredients);
-            $('#drinks').DataTable().columns.adjust().draw();
+            $('#drinksText').DataTable().clear();
+            $('#drinksText').DataTable().rows.add(drinks);
+            $('#drinksText').DataTable().columns.adjust().draw();
         }
     });
 }
 
-function setup() {
+function setupDrink() {
     // Modal submit.
+
+
     $("#saveDrink").on('submit', function(e) {
         console.log("Submitted new menu item form");
 
         // Post the data from the modal.
-        postData();
+        postDataDrink();
 
         // Reset modal to hide and no values.
         $('#newDrinkModal').modal('hide');
-        $("#nameDrink").val("");
-        $("#priceDrink").val("");
+        $("#name").val("");
+        $("#price").val("");
     });
 
+
     // Load DataTable with data format.
-    $('#drinks').DataTable({
+    $('#drinksText').DataTable({
         columns: [
             { "data": "drinkName" },
             { "data": "drinkPrice" }
@@ -129,5 +132,5 @@ function setup() {
     });
 
     // Load first data.
-    getData();
+    getDataDrink();
 }
