@@ -13,6 +13,23 @@ function getDrinkItems() {
     });
 }
 
+// function getDrinkItems() {
+//     $.get("/api/drink/", function (data) {
+//         if (data.length <= 0) {return;}
+//         $('#drinksText').empty();
+//         for (var i = 0; i < data.length; i++) {
+//             $('#drinksText').DataTable(
+//                 '<tr>' +
+//                 '<td>' + data[i].drinkName + '</td>' +
+//                 '<td>' + data[i].drinkPrice + '</td>' +
+//                 '<tr>'
+//             );
+//         }
+//     });
+// }
+
+
+
 function saveDrinkItems(b) {
     b.preventDefault();
 

@@ -52,7 +52,7 @@ public class IngredientController {
 //    }
 
     @PostMapping("/add")
-    public Ingredient registerIngredient(Ingredient ingredient){
+    public Ingredient registerIngredient(@RequestBody Ingredient ingredient){
         System.out.println(ingredient);
         ingredients.add(ingredient);
         return ingredientRepository.save(ingredient);
