@@ -35,101 +35,192 @@
             </div>
         </div>
     </nav>
+<!--Start-->
 
-        <div class="container">
-            <div class="row">
-             <h2 class="mt-2 mb-2 mx-auto">Dishes</h2>
-            </div>
+    <div class="container">
         <div class="row">
-            <form class="col-md-12" id="saveMenuItem">
-                <div class="form-group row">
-                    <label for="nameMenuItem" class="col-sm-2 col-form-label">Name:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nameMenuItem" required>
-                        </div>
-                </div>
-                <div class="form-group row">
-                    <label for="priceMenuItem" class="col-sm-2 col-form-label">Price:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="priceMenuItem" required>
-                        </div>
-                </div>
-                <button type="submit" class="btn btn-secondary "id="submitMenuItem">Add a menu item</button>
-            </form>
+            <h5 class="mx-auto">Dishes</h5>
         </div>
+        <div class="row">
+            <button class="mx-auto mt-1 mb-4" type="button" data-toggle="modal" data-target="#newFoodModal">New Dish</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <!-- New Book Modal -->
+        <div id="newFoodModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">New dish</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <form class="col-md-12" id="saveFood" onsubmit="return false;">
+                                <div class="form-group row">
+                                    <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nameMenuItem" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="price" class="col-sm-2 col-form-label">Price:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="priceMenuItem" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-secondary" id="submitMenuItem">Add a dish</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+             <!--<h2 class="mt-2 mb-2 mx-auto">Dishes</h2>-->
+            <!--</div>-->
+        <!--<div class="row">-->
+            <!--<form class="col-md-12" id="saveMenuItem">-->
+                <!--<div class="form-group row">-->
+                    <!--<label for="nameMenuItem" class="col-sm-2 col-form-label">Name:</label>-->
+                        <!--<div class="col-sm-10">-->
+                            <!--<input type="text" class="form-control" id="nameMenuItem" required>-->
+                        <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group row">-->
+                    <!--<label for="priceMenuItem" class="col-sm-2 col-form-label">Price:</label>-->
+                        <!--<div class="col-sm-10">-->
+                            <!--<input type="text" class="form-control" id="priceMenuItem" required>-->
+                        <!--</div>-->
+                <!--</div>-->
+                <!--<button type="submit" class="btn btn-secondary "id="submitMenuItem">Add a menu item</button>-->
+            <!--</form>-->
+        <!--</div>-->
+        <!--End-->
+
+    <div class="container">
+        <div class="row mt-2">
+            <h6 class="mx-auto">Current dishes</h6>
+        </div>
+        <div class="row">
+            <table class="table" id="menuItem">
+                <thead>
+                <tr>
+                    <th scope="col" width="40%">Name</th>
+                    <th scope="col" width="30%">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr>
+
+    <!--Change Drinks will happen from here-->
+
+    <div class="container">
+        <div class="row">
+            <h5 class="mx-auto">Drinks</h5>
+        </div>
+        <div class="row">
+            <button class="mx-auto mt-1 mb-4" type="button" data-toggle="modal" data-target="#newDrinkModal">New Drink</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <!-- New Book Modal -->
+        <div id="newDrinkModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">New Drink</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <form class="col-md-12" id="saveForm" onsubmit="return false;">
+                                <div class="form-group row">
+                                    <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="price" class="col-sm-2 col-form-label">Price:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="price" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-secondary" id="submit">Add a drink</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<h2 class="mt-2 mb-2 mx-auto">Drinks</h2>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<form class="col-md-12" id="saveDrink">-->
+                    <!--<div class="form-group row">-->
+                        <!--<label for="nameDrink" class="col-sm-2 col-form-label">Name:</label>-->
+                        <!--<div class="col-sm-10">-->
+                            <!--<input type="text" class="form-control" id="nameDrink" required>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group row">-->
+                        <!--<label for="priceDrink" class="col-sm-2 col-form-label">Price:</label>-->
+                        <!--<div class="col-sm-10">-->
+                            <!--<input type="text" class="form-control" id="priceDrink" required>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<button type="submitDrink" class="btn btn-secondary" id="submit">Add a drink</button>-->
+                <!--</form>-->
+            <!--</div>-->
+<!--Change will end here :P-->
+
 
         <div class="container">
             <div class="row mt-2">
-                <h6 class="mx-auto">Current dishes</h6>
+                <h6 class="mx-auto">Current drinks</h6>
             </div>
             <div class="row">
-                <table class="table">
+                <table class="table" id="drinksText">
                     <thead>
                     <tr>
                         <th scope="col" width="40%">Name</th>
                         <th scope="col" width="30%">Price</th>
                     </tr>
                     </thead>
-                    <tbody id="menuItem">
+                    <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-
-        </div>
-
-        <hr>
-
-        <div class="container">
-            <div class="row">
-                <h2 class="mt-2 mb-2 mx-auto">Drinks</h2>
-            </div>
-            <div class="row">
-                <form class="col-md-12" id="saveDrink">
-                    <div class="form-group row">
-                        <label for="nameDrink" class="col-sm-2 col-form-label">Name:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nameDrink" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="priceDrink" class="col-sm-2 col-form-label">Price:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="priceDrink" required>
-                        </div>
-                    </div>
-                    <button type="submitDrink" class="btn btn-secondary" id="submit">Add a drink</button>
-                </form>
-            </div>
-
-            <div class="container">
-                <div class="row mt-2">
-                    <h6 class="mx-auto">Current drinks</h6>
-                </div>
-                <div class="row">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col" width="40%">Name</th>
-                            <th scope="col" width="30%">Price</th>
-                        </tr>
-                        </thead>
-                        <tbody id="drinksText">
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-    </div>
 
     <footer class="page-footer font-small pt-4 mt-3 bg-dark">
         <!--Footer Links-->
