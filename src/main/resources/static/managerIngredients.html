@@ -22,23 +22,66 @@
         </button>
     </nav>
 
-    <div>
-        <div class="container">
-            <div class="row">
-                <div>
-                    <h2 class="m-3 slogan">Ingredients</h2>
-                    <p class="ml-3 mr-3">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
-                        porttitor eu, consequat vitae, eleifend ac, enim.
-                    </p>
+
+    <div class="container">
+        <div class="row">
+            <h2 class="mt-2 mb-2 mx-auto" >Ingredients</h2>
+        </div>
+        <div class="row">
+            <form class="col-md-12" id="saveForm">
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
                 </div>
+                <div class="form-group row">
+                    <label for="grams" class="col-sm-2 col-form-label">Grams:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="grams" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="price" class="col-sm-2 col-form-label">Price:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="price" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary" id="submit">Add an ingredient</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <div class="row mt-2">
+                <h6 class="mx-auto">Current ingredients</h6>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" width="40%">Name</th>
+                        <th scope="col" width="30%">Grams</th>
+                        <th scope="col" width="30%">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="ingredients">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+
     </div>
+</div>
 
     <footer class="page-footer font-small pt-4 mt-3 bg-dark">
         <!--Footer Links-->
         <div class="container">
+<<<<<<< HEAD
 
             <div class="row">
                 <div class="col-12 text-center">
@@ -48,6 +91,8 @@
                 </div>
             </div>
 
+=======
+>>>>>>> tableCarlijn
             <div class="row">
                 <div class="col-12 py-3 text-center text-light">
                     &copy; 2018 Copyright: Pega+.org
@@ -59,6 +104,8 @@
 </div>
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="ingredient.js"></script>
 </body>
 
 </html>

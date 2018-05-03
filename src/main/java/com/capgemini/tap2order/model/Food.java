@@ -1,27 +1,23 @@
 package com.capgemini.tap2order.model;
 
+import lombok.Data;
+import org.hibernate.validator.constraints.EAN;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.ArrayList;
+import java.util.List;
 
-public class Food extends MenuItem {
+@Entity
+@Data
+public class Food{
 
-    //Food inherits from MenuItem, but also has an Ingredient or a list of Ingredients.
-
-        private  ArrayList<Ingredient> listOfIngredients = new ArrayList<>();
-
-    //Constructor that takes the elements of MenuItem + a list of ingredients
-    public Food(int newId, EMenuItem newItem, String newName, double newPrice, ArrayList<Ingredient> listOfIngredients) {
-        super(newId, newItem, newName, newPrice);
-        this.listOfIngredients = listOfIngredients;
-    }
-
-    public ArrayList<Ingredient> getListOfIngredients() {
-        return listOfIngredients;
-    }
-
-    public void setListOfIngredients(ArrayList<Ingredient> listOfIngredients) {
-        this.listOfIngredients = listOfIngredients;
-    }
-
-//the printMenuItem from the MenuItem class, including the method for printing the list of ingredients
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String name;
+    private double price;
 
 }
