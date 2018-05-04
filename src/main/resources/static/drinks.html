@@ -6,6 +6,7 @@
         Tap2Order
     </title>
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -41,26 +42,22 @@
         </div>
     </section>
 
-    <div>
-        <div class="container">
-            <div class="row mb-5">
-                <table id="drinklist" class="table table-bordered">
+    <div class="container">
+        <div class="row mt-2">
+            <h6 class="mx-auto">Current drinks</h6>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table" id="drinksText">
                     <thead>
-                    <td>Description</td>
-                    <td>Price</td>
-                    <br/>
-                    <button onclick="getDrinkItems()">Click to list all drink items</button>
-                    <drinks id="drinksText">No drinks</drinks>
-                    <br/>
-                    <td></td>
+                    <tr>
+                        <th scope="col" width="40%">Name</th>
+                        <th scope="col" width="30%">Price</th>
+                    </tr>
                     </thead>
+                    <tbody>
+                    </tbody>
                 </table>
-                <div class="col-6 text-center">
-                    <a href="food.html" class="btn btn-warning text-dark">
-                        <h5 class="menufood">Go to Food</h5>
-                        <img src="img/icon_food.png" width="50" height="50">
-                    </a>
-                </div>
             </div>
         </div>
     </div>
@@ -104,8 +101,8 @@
 
 </div>
 <script src="vendor/jquery/dist/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="drinks.js"></script>
 
 </body>

@@ -6,6 +6,7 @@
         Tap2Order
     </title>
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -41,35 +42,56 @@
         </div>
     </section>
 
-    <div>
-
         <div class="container">
             <div class="row mb-5">
 
 
                 <p id="menu-page-show"></p>
+            </div>
+                <div class="row mt-2">
+                    <h5 class="mx-auto">Available Dishes</h5>
+                </div>
 
-                <table id="foodlist" class="table table-bordered">
-                    <thead>
-                        <td>Description</td>
-                        <td>Price</td>
-                        <br/>
-                        <button onclick="getMenuItems()">Click to list all menu items</button>
-                        <ingredients id="menuItem">No menu item</ingredients>
-                        <br/>
-                        <td></td>
-                    </thead>
-                </table>
 
-                <div class="col-6 text-center">
-                    <a href="drinks.html" class="btn btn-warning text-dark">
-                        <h5 class="menudrinks">Go to Drinks</h5>
-                        <img src="img/icon_drink.png" width="50" height="50">
-                    </a>
+
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table" id="menuItem">
+                            <thead>
+                            <tr>
+                                <th scope="col" width="40%">Name</th>
+                                <th scope="col" width="30%">Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+
+            <hr>
+
+
+            <!--<table id="foodlist" class="table table-bordered">-->
+            <!--<thead>-->
+            <!--<td>Description</td>-->
+            <!--<td>Price</td>-->
+            <!--<br/>-->
+            <!--<button onclick="getMenuItems()">Click to list all menu items</button>-->
+            <!--<ingredients id="menuItem">No menu item</ingredients>-->
+            <!--<br/>-->
+            <!--<td></td>-->
+            <!--</thead>-->
+            <!--</table>-->
+
+            <div class="col-6 text-center">
+                <a href="drinks.html" class="btn btn-warning text-dark">
+                    <h5 class="menudrinks">Go to Drinks</h5>
+                    <img src="img/icon_drink.png" width="50" height="50">
+                </a>
+            </div>
         </div>
-    </div>
 
 
     <footer class="page-footer font-small pt-4 mt-3 bg-dark">
@@ -110,8 +132,8 @@
 
 </div>
 <script src="vendor/jquery/dist/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="food.js"></script>
 </body>
 

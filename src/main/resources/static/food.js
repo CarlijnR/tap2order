@@ -1,79 +1,81 @@
-//function getMenuItems() {
-//    $.get("/api/menuItem/", function (data) {
-//        if (data.length <= 0) {return;}
-//        $('#menuItem').empty();
-//        for (var i = 0; i < data.length; i++) {
-//            $('#menuItem').append(
-//            '<tr>' +
-//                '<td>' + data[i].menuItemName + '</td>' +
-//                '<td>' + data[i].menuItemPrice + '</td>' +
-//            '<tr>'
-//            );
-//        }
+//function getMenuItems(){
+//    $.get("/api/menuItem/", function(data){
+//    if(data.length<=0){return;}
+//    var html = "";
+//    for(var i=0;i<data.length;i++){
+//    html +="<p>" + data[i].menuItemName + " - " + data[i].menuItemPrice}
+//    $("#menuItem").html(html);
 //    });
 //}
 //
-//function saveMenuItems(b) {
-//    b.preventDefault();
+//function getDrinkItems(){
+//    $.get("/api/drink/", function(data){
+//    if(data.length<=0){return;}
+//    var html = "";
+//    for(var i=0;i<data.length;i++){
+//    html +="<p>" + data[i].drinkName + " - " + data[i].drinkPrice}
+//    $("#drinksText").html(html);
+//    });
+//}
+
+
+
+//function printOrder(e)
+//{
+//e.preventDefault();
+//        $.get("/api/restaurant/order/printOrder", function(data){
+//        console.log("Enters this shit");
+//        if (data.length<=0)
+//        {
+//           console.log("empty output");
+//            return;
+//        }
+//        var string="";
+//        for(var i=0; i<data.length;i++){
+//            string += "<p>" + data[i] + "</p>";
+//            console.log(data[i]);
+////            for(var j=0; j<data[i].menuItemList.name;j++){
+////            console.log(data[i].menuItemList.name);
+////            console.log("New Item");
+////        }
+//        console.log("After");
 //
-//    var nameMI = $("#nameMenuItem").val();
-//    var priceMI = $("#priceMenuItem").val();
 //
-//    $.post("/api/menuItem/add",{
-//        menuItemName: nameMI,
-//        menuItemPrice: priceMI
-//      },
-//    getMenuItems
-//    )
-//};
+//}
+//});
+//}
 //
-////function removeIngredient(){
-////    $.get("/api/ingredient/remove/{id}", function(data){
-////        if(data.length<=0){return;}
-////        var html = "";
-////        for(var i=0;i<data.length;i++){
-////        html +="<p>" + data[i].ingredientId;
-////        data[i].ingredientId = id;
-////    },)};
+//function menuItem(b)
+//{
+//b.preventDefault();
+//$.get("api/restaurant/menu/list", function(data){
+//    console.log("Checking this list");
+//            if (data.length<=0)
+//            {
+//               console.log("empty list");
+//               return;
+//            }
+//            var string="";
+//            for(var i=0; i<data.length;i++){
+//            console.log(data[i]);
+//                string += "<p>" + data[i].name + "- $" + data[i].price;
 //
+//    //            for(var j=0; j<data[i].menuItemList.name;j++){
+//    //            console.log(data[i].menuItemList.name);
+//    //            console.log("New Item");
+//    //        }
+//            console.log("After");
+//            }
+//            $("#menu-page-show").html(string);
+//});
+//}
 //
-//$("#saveMenuItem").submit(saveMenuItems);
+//$("#foodbutton").click(menuItem);
 
-
-function postDataFood() {
-    console.log("posting data...");
-
-    // Get values from html.
-    var name = $("#nameMenuItem").val();
-    var price = $("#priceMenuItem").val();
-
-
-    // Create JS object with data.
-    var newFood = {
-        menuItemName : name,
-        menuItemPrice : price
-    };
-    console.log(newFood);
-
-    // Convert JS object to JSON.
-    var validJsonFood = JSON.stringify(newFood);
-    console.log(validJsonFood);
-
-    // Post JSON to endpoint.
-    $.ajax({
-        url:"/api/menuItem/add",
-        type:"post",
-        data: validJsonFood,
-        contentType: "application/json",
-        success: function(result) {
-            // On successful post, reload data to get the added one as well.
-            console.log("success post data!");
-            getDataFood();
-        }
-    });
-}
 
 function getDataFood() {
+
+
     console.log("getting data...");
 
     // Get the data from endpoint.
@@ -90,28 +92,15 @@ function getDataFood() {
     });
 }
 
-function setupFood() {
-    // Modal submit.
-    $("#saveFood").on('submit', function(e) {
-        console.log("Submitted new menu item form");
+    $(document).ready(function () {
+        console.log("tadaafood");
+          $('#menuItem').DataTable({
+                columns: [
+                    { "data": "menuItemName" },
+                    { "data": "menuItemPrice" }
+                ]
+            });
 
-        // Post the data from the modal.
-        postDataFood();
+        getDataFood();
 
-        // Reset modal to hide and no values.
-        $('#newFoodModal').modal('hide');
-        $("#nameMenuItem").val("");
-        $("#priceMenuItem").val("");
     });
-
-    // Load DataTable with data format.
-    $('#menuItem').DataTable({
-        columns: [
-            { "data": "menuItemName" },
-            { "data": "menuItemPrice" }
-        ]
-    });
-
-    // Load first data.
-    getDataFood();
-}
