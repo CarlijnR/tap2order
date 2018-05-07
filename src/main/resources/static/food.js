@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //function getMenuItems(){
 //    $.get("/api/menuItem/", function(data){
 //    if(data.length<=0){return;}
@@ -18,8 +17,6 @@
 //    $("#drinksText").html(html);
 //    });
 //}
-
-
 
 //function printOrder(e)
 //{
@@ -105,7 +102,7 @@ function getDataFood() {
         getDataFood();
 
     });
-=======
+
 $.get("api/restaurant/menu/list/food", function(data){
     for(var i=0; i < data.length;i++){
         $('#foodlist').append(
@@ -119,4 +116,4 @@ $.get("api/restaurant/menu/list/food", function(data){
         );
     }
 })
->>>>>>> master
+

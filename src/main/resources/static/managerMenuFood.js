@@ -50,8 +50,8 @@ function postDataFood() {
 
     // Create JS object with data.
     var newFood = {
-        menuItemName : name,
-        menuItemPrice : price
+        menuItemName: name,
+        menuItemPrice: price
     };
     console.log(newFood);
 
@@ -61,11 +61,11 @@ function postDataFood() {
 
     // Post JSON to endpoint.
     $.ajax({
-        url:"/api/menuItem/add",
-        type:"post",
+        url: "/api/menuItem/add",
+        type: "post",
         data: validJsonFood,
         contentType: "application/json",
-        success: function(result) {
+        success: function (result) {
             // On successful post, reload data to get the added one as well.
             console.log("success post data!");
             getDataFood();
@@ -78,9 +78,9 @@ function getDataFood() {
 
     // Get the data from endpoint.
     $.ajax({
-        url:"/api/menuItem/",
-        type:"get",
-        success: function(foods) {
+        url: "/api/menuItem/",
+        type: "get",
+        success: function (foods) {
             // On successful get, reload the datatable with new data.
             console.log("This is the data: " + foods);
             $('#menuItem').DataTable().clear();
@@ -92,7 +92,7 @@ function getDataFood() {
 
 function setupFood() {
     // Modal submit.
-    $("#saveFood").on('submit', function(e) {
+    $("#saveFood").on('submit', function (e) {
         console.log("Submitted new menu item form");
 
         // Post the data from the modal.
@@ -107,8 +107,8 @@ function setupFood() {
     // Load DataTable with data format.
     $('#menuItem').DataTable({
         columns: [
-            { "data": "menuItemName" },
-            { "data": "menuItemPrice" }
+            {"data": "menuItemName"},
+            {"data": "menuItemPrice"}
         ]
     });
 
