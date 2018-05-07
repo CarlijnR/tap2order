@@ -6,5 +6,19 @@ var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
 
 console.log("Order:", dataDrink);
 
+ $(document).ready(function (dataFood){
+ console.log("enters function");
+    for(var i=0; i < dataFood.length;i++){
+        $('#table').append(
+            '<tr>' +
+            '<td class="h5">' + dataFood[i][i].menuItemName + '</td>' +
+            '<td>' +
+            '</td>' +
+            '<td><button class="btn btn-grey btn-sm mr-1">-</button>0<button class="btn btn-grey btn-sm ml-1">+</button></td>' +
+            '<td>' + dataFood[i][i].menuItemPrice + '</td>' +
+            '</tr>'
+        );
+    }
+})
 
 
