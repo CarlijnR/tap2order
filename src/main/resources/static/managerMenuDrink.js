@@ -155,7 +155,7 @@ function postDrinkData() {
 
     // Create JS object with data.
     var newDrink = {
-        drinkName : name,
+        drinkName: name,
         drinkPrice: price
     };
     console.log(newDrink);
@@ -166,11 +166,11 @@ function postDrinkData() {
 
     // Post JSON to endpoint.
     $.ajax({
-        url:"/api/drink/add",
-        type:"post",
+        url: "/api/drink/add",
+        type: "post",
         data: validJsonDrink,
         contentType: "application/json",
-        success: function(result) {
+        success: function (result) {
             // On successful post, reload data to get the added one as well.
             console.log("success post data!");
             getDrinkData();
@@ -183,9 +183,9 @@ function getDrinkData() {
 
     // Get the data from endpoint.
     $.ajax({
-        url:"/api/drink/",
-        type:"get",
-        success: function(drinks) {
+        url: "/api/drink/",
+        type: "get",
+        success: function (drinks) {
             // On successful get, reload the datatable with new data.
             console.log("This is the data: " + drinks);
             $('#drinksText').DataTable().clear();
@@ -197,7 +197,7 @@ function getDrinkData() {
 
 function setupDrink() {
     // Modal submit.
-    $("#saveDrink").on('submit', function(k) {
+    $("#saveDrink").on('submit', function (k) {
         console.log("Submitted new drink form");
 
         // Post the data from the modal.
@@ -212,8 +212,8 @@ function setupDrink() {
     // Load DataTable with data format.
     $('#drinksText').DataTable({
         columns: [
-            { "data": "drinkName" },
-            { "data": "drinkPrice" }
+            {"data": "drinkName"},
+            {"data": "drinkPrice"}
         ]
     });
 
