@@ -17,9 +17,16 @@
             '<td class="h5">' + dataFood[i].menuItemName + '</td>' +
             '<td>' + dataFood[i].menuItemPrice + '</td>' +
             '</tr>'
-        );
+        );}
 
-}
+            for(var i=0; i < dataDrink.length; i++){
+
+                $('#table').append(
+                    '<tr>' +
+                    '<td class="h5">' + dataDrink[i].drinkName + '</td>' +
+                    '<td>' + dataDrink[i].drinkPrice + '</td>' +
+                    '</tr>'
+                );}
 })
 
 
