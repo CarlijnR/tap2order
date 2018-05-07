@@ -10,114 +10,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="bg-dark">
-<div class="bg-light">
-    <nav class="navbar navbar-light navbar-expand-lg bg-dark">
-        <a href="index.html" class="navbar-brand text-light">
-            <img src="img/icon_restaurant_white.png" width="50" height="50">
-        </a>
-        <button class="btn navbar-toggler bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav mx-auto text-center">
-                <a class="nav-item nav-link text-warning ml-2 mr-2" href=index.html>Home</a>
-                <a class="nav-item nav-link text-warning ml-2 mr-2" href=menu.html>Menu</a>
-                <a class="nav-item nav-link text-warning ml-2 mr-2" href=order.html>My order</a>
-                <a class="nav-item">
-                    <button class="btn btn-dark text-warning ml-2 mr-2">
-                        Call waiter
-                        <img src="img/icon_waiter_white.png" width="20" height="20" ;>
-                    </button>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div class="bg-light">
+        <nav class="navbar navbar-light navbar-expand-lg bg-dark">
+            <a href="index.html" class="navbar-brand text-light">
+                <img src="img/icon_restaurant_white.png" width="50" height="50">
+            </a>
+            <button class="btn navbar-toggler bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto text-center">
+                    <a class="nav-item nav-link text-warning ml-2 mr-2" href=index.html>Home</a>
+                    <a class="nav-item nav-link text-warning ml-2 mr-2" href=menu.html>Menu</a>
+                    <a class="nav-item nav-link text-warning ml-2 mr-2" href=order.html>My order</a>
+                    <a class="nav-item ">
+                        <button id="myBtn" class="btn btn-dark text-warning ml-2 mr-2">
+                            Call Waiter
+                            <img src="img/icon_waiter_white.png" width="20" height="20" ;>
+                        </button>
 
-    <section class="jumbotron text-center text-light">
-        <div class="container">
-            <h1 class="jumbotron-heading-home">Carte Blanche</h1>
-        </div>
-    </section>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
 
-    <div>
-        <div class="container">
-            <div class="row">
-                <div>
-                    <h2 class="m-3 slogan">Introduction of the restaurant</h2>
-                    <p class="ml-3 mr-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
-                        porttitor eu, consequat vitae, eleifend ac, enim.
-                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
-                        metus varius laoreet. Quisque rutrum.
-                        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
-                        dui.</p>
-                </div>
-            </div>
-        </div>
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>The waiter is on his way...</p>
+                            </div>
 
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <a href="menu.html" class="btn btn-warning text-dark">
-                        <h5 class="menu">See the menu</h5>
-                        <img src="img/icon_menu.png" width="100" height="100">
+                        </div>
                     </a>
                 </div>
             </div>
+        </nav>
+
+        <section class="jumbotron text-center text-light">
+            <div class="container">
+                <h1 class="jumbotron-heading-home">Carte Blanche</h1>
+            </div>
+        </section>
+
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <h2 class="m-3 slogan">Introduction of the restaurant</h2>
+                        <p class="ml-3 mr-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                            porttitor eu, consequat vitae, eleifend ac, enim.
+                            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
+                            metus varius laoreet. Quisque rutrum.
+                            Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
+                            dui.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <a href="menu.html" class="btn btn-warning text-dark">
+                            <h5 class="menu">See the menu</h5>
+                            <img src="img/icon_menu.png" width="100" height="100">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+        <footer class="page-footer font-small pt-4 mt-3 bg-dark">
+            <!--Footer Links-->
+            <div class="container">
+                <div class="row">
+                    <!--First column-->
+                    <div class="text-center col-md-6">
+                        <h6 class="text-light pb-2">Find Carte Blanche on</h6>
+                        <p>
+                            <a href="https://twitter.com/hashtag/restaurant" class="ml-2">
+                                <img src="img/icon_twitter_white.png" width="30" height="30">
+                            </a>
+                            <a href="https://www.instagram.com/explore/tags/restaurant/">
+                                <img src="img/icon_instagram_white.png" width="30" height="30">
+                            </a>
+                        </p>
+                    </div>
+                    <!--/.First column-->
+
+                    <!--Second column-->
+                    <div class="text-center col-md-6">
+                        <h6 class="text-light">Stay updated</h6>
+                        <button class="btn btn-warning mr-2">
+                            Newsletter >
+                        </button>
+                    </div>
+                    <!--/.Second column-->
+                </div>
+
+
+                <div class="row">
+                    <button class="btn btn-secondary mx-auto" onclick="document.getElementById('id01').style.display='block'"
+                            style="width:auto;">Login
+                    </button>
+                </div>
+
+                <div id="id01" class="modal">
+
+                    <form class="modal-content animate" action="manager.html">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                  title="Close Modal">&times;</span>
+                            <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+                        </div>
+
+                        <div class="container">
+                            <label><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button id="button-popup" type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="row">
+                            <div class="mx-auto">
+                                <button id="button-popup" class="btn btn-warning" type="button"
+                                        onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+                                    Cancel
+                                </button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12 py-3 text-center text-light">
+                        &copy; 2018 Copyright: Pega+.org
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
-
-    <footer class="page-footer font-small pt-4 mt-3 bg-dark">
-        <!--Footer Links-->
-        <div class="container">
-            <div class="row">
-                <!--First column-->
-                <div class="col-6 text-center">
-                    <h6 class="text-light pb-2">Find Carte Blanche on</h6>
-                    <p>
-                        <a href="https://twitter.com/hashtag/restaurant" class="ml-2">
-                            <img src="img/icon_twitter_white.png" width="30" height="30">
-                        </a>
-                        <a href="https://www.instagram.com/explore/tags/restaurant/">
-                            <img src="img/icon_instagram_white.png" width="30" height="30">
-                        </a>
-                    </p>
-                </div>
-                <!--/.First column-->
-
-                <!--Second column-->
-                <div class="col-6 text-center">
-                    <h6 class="text-light pb-2">Stay updated</h6>
-                    <button class="btn btn-warning mr-2">
-                        Newsletter >
-                    </button>
-                </div>
-                <!--/.Second column-->
-            </div>
-
-            <div class="row">
-                <div class="col-12 text-center">
-                    <a href="manager.html" class="btn btn-secondary text-light">
-                    Login
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 py-3 text-center text-light">
-                    &copy; 2018 Copyright: Pega+.org
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</div>
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="managerMenuDrink.js"></script>
 <script src="managerMenuFood.js"></script>
+<script src="index.js"></script>
 </body>
 
 </html>
