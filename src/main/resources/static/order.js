@@ -1,4 +1,10 @@
-var data = JSON.parse(window.sessionStorage.getItem("orderData"));
+var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
 
-console.log("Order:", data);
+console.log("Order:", dataFood);
+
+var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
+
+console.log("Order:", dataDrink);
+
+
 

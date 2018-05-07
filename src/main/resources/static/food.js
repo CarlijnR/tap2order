@@ -33,14 +33,14 @@ function getDataFood() {
                                 console.log("enters rowData function");
                                 events.prepend('<div><b>'+type+' selection</b> - '+JSON.stringify(rowData)+'</div>' );
                                 console.log(rowData);
-                                window.sessionStorage.setItem("orderData", JSON.stringify(rowData));
+                                window.sessionStorage.setItem("foodOrderData", JSON.stringify(rowData));
                             } )
                 .on( 'deselect', function ( e, dt, type, indexes) {
                      console.log("enters .on function");
                      var rowData = table.rows(indexes).data().toArray();
                      events.prepend( '<div><b>'+type+' <i>de</i>selection</b> - '+JSON.stringify( rowData )+'</div>' );
                      console.log(rowData);
-                     window.sessionStorage.setItem("orderData", JSON.stringify(rowData));
+                     window.sessionStorage.setItem("foodOrderData", JSON.stringify(rowData));
                     });
         getDataFood();
     });
