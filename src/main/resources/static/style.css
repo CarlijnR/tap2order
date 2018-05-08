@@ -120,12 +120,6 @@ span.psw {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
