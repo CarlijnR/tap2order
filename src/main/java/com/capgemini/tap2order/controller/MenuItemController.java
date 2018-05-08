@@ -21,15 +21,15 @@ public class MenuItemController {
     private MenuItemRepository menuItemRepository;
 
     @GetMapping("/")
-    public Iterable<MenuItem> getMenuItem(){
+    public Iterable<MenuItem> getMenuItem() {
         return menuItemRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public MenuItem getMenuItemByID(@PathVariable int id){
+    public MenuItem getMenuItemByID(@PathVariable int id) {
         Optional<MenuItem> menuItem = menuItemRepository.findById(id);
 
-        if(menuItem.isPresent()){
+        if (menuItem.isPresent()) {
             return menuItem.get();
         }
         return null;
@@ -51,7 +51,7 @@ public class MenuItemController {
 //    }
 
     @PostMapping("/add")
-    public MenuItem registerMenuItem(@RequestBody MenuItem menuItem){
+    public MenuItem registerMenuItem(@RequestBody MenuItem menuItem) {
         System.out.println(menuItem);
         menuitems.add(menuItem);
         return menuItemRepository.save(menuItem);

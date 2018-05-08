@@ -18,6 +18,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int orderId;
+    private int quantity;
 
     private ArrayList<MenuItem> menuItems;
     private ArrayList<Drink> drinks;
