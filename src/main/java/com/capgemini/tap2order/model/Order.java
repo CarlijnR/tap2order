@@ -1,7 +1,5 @@
 package com.capgemini.tap2order.model;
 
-
-import com.capgemini.tap2order.model.MenuItem;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -18,7 +16,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int orderId;
-    private int quantity;
+   // private int quantity;
 
     private ArrayList<MenuItem> menuItems;
     private ArrayList<Drink> drinks;
