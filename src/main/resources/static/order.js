@@ -17,7 +17,7 @@
             '<tr>' +
             '<td class="h5">' + dataFood[i].menuItemName + '</td>' +
             '<td>' + dataFood[i].menuItemPrice + '</td>' +
-            '<td>' + '<input class="form-control col-md-4" type="text" placeholder="0" name="dataFood['+i+'].quantity" id="quantity">' + '</td>' +
+            '<td>' + '<input class="form-control col-md-4" type="text" placeholder="1" name="dataFood['+i+'].quantity" id="quantity'+i+'">' + '</td>' +
             '</tr>'
         );
 
@@ -25,27 +25,12 @@
 })
 
 function updateOrderData() {
-    console.log("posting data...");
     var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
-    $('.table tr').each(function(i,row){
-    var $row=$(row);
-    $quantities=$row.find('input:dataFood['+i+'].quantity');
-    var quantity = $("#quantity").val();
-    console.log(quantity);
-    console.log("works");
-    dataFood[0].quantity=quantity;
-    console.log(dataFood[0].quantity);
-    console.log("posting data2");
-
-    console.log("posting data3");
-    $quantities.each(function(i,quantities){
-    console.log("posting data4");
-    var $quantityOrder = $(quantity);
-    console.log("we are in updateOrderData");
-    window.sessionStorage.setItem("quantity", JSON.stringify(quantityOrder));
-    });
-
-    });
+    for (var i=0; i<dataFood.length; i++){
+    var quantity = $('#quantity'+i+'').val();
+    dataFood[i].quantity=quantity;
+    };
+    console.log(dataFood);
+    window.sessionStorage.setItem("foodOrderData", JSON.stringify(dataFood));
 }
-
 $("#quantityButton").click(updateOrderData);
