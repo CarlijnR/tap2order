@@ -17,7 +17,7 @@
             '<tr>' +
             '<td class="h5">' + dataFood[i].menuItemName + '</td>' +
             '<td>' + dataFood[i].menuItemPrice + '</td>' +
-            '<td>' + '<input class="form-control col-md-4" type="text" placeholder="1" name="dataFood['+i+'].quantity" id="quantity'+i+'">' + '</td>' +
+            '<td>' + '<input value="1" class="form-control col-md-4" type="number" placeholder="(quantity)" name="dataFood['+i+'].quantity" id="quantity'+i+'">' + '</td>' +
             '</tr>'
         );
 
