@@ -12,7 +12,8 @@
 <body class="bg-dark">
 <div class="bg-light">
     <nav class="navbar navbar-light navbar-expand-lg bg-dark">
-        <a href="index.html" class="navbar-brand text-light">
+        <a class="navbar-brand text-light">
+            Logo
             <img src="img/icon_restaurant_white.png" width="50" height="50">
         </a>
         <button class="btn navbar-toggler bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -36,41 +37,123 @@
 
     <section class="jumbotron text-center text-light">
         <div class="container">
-            <h1 class="jumbotron-heading">Carte Blanche</h1>
+            <h1 class="jumbotron-heading">Restaurant name</h1>
         </div>
     </section>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h4>Your current table order</h4>
-            </div>
-        </div>
-
-            <div class="container">
-                <div class="row mt-2">
-                    <h6 class="mx-auto">List of Drinks</h6>
-                    <table class="table" id="table">
-                        <thead>
-                        <tr>
-                            <th scope="col" width="40%">Name</th>
-                            <th scope="col" width="30%">Price</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                    <div class="row">
-                        Tip: <input class="form-control col-md-4" type="text" placeholder="optional">
-                        Total:
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h4>Your current table order</h4>
                 </div>
             </div>
-
         </div>
+        <div class="container">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" width="25%">Dish</th>
+                            <th scope="col" width="25%">Discription</th>
+                            <th scope="col" width="25%">Amount</th>
+                            <th scope="col" width="25%">Price</th>
 
-
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="h5">Pizza Verdura</td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                                porttitor eu, consequat vitae, eleifend ac, enim.
+                                <button class="btn btn-grey btn-sm">See ingredients</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-grey btn-sm">
+                                    -
+                                </button>
+                                2
+                                <button class="btn btn-grey btn-sm">
+                                    +
+                                </button>
+                            </td>
+                            <td>&euro; 12</td>
+                        </tr>
+                        <tr>
+                            <td class="h5">Tiramisu</td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                                porttitor eu, consequat vitae, eleifend ac, enim.
+                                <button class="btn btn-grey btn-sm">See ingredients</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-grey btn-sm">
+                                    -
+                                </button>
+                                2
+                                <button class="btn btn-grey btn-sm">
+                                    +
+                                </button>
+                            </td>
+                            <td>&euro; 16</td>
+                        </tr>
+                        <tr>
+                            <td class="h5">Water</td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                                porttitor eu, consequat vitae, eleifend ac, enim.
+                                <button class="btn btn-grey btn-sm">See ingredients</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-grey btn-sm">
+                                    -
+                                </button>
+                                2
+                                <button class="btn btn-grey btn-sm">
+                                    +
+                                </button>
+                            </td>
+                            <td>&euro; 4</td>
+                        </tr>
+                        <tr>
+                            <td class="h5">Beer</td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean leo ligula,
+                                porttitor eu, consequat vitae, eleifend ac, enim.
+                                <button class="btn btn-grey btn-sm">See ingredients</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-grey btn-sm">
+                                    -
+                                </button>
+                                2
+                                <button class="btn btn-grey btn-sm">
+                                    +
+                                </button>
+                            </td>
+                            <td>&euro; 3</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="font-weight-bold">
+                                Tip: <input class="form-control col-md-4" type="text" placeholder="(optional)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="font-weight-bold">
+                                Total &euro; 29
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="mx-auto mb-3 mt-3">
@@ -86,7 +169,7 @@
                     </a>
 
 
-                    <a href="order.html" class="btn btn-warning mt-1 text-dark">
+                    <a href="food.html" class="btn btn-warning mt-1 text-dark">
                         <h6 class="payment">I would like to pay</h6>
                         <img src="img/icon_bill.png" width="30" height="30">
                     </a>
@@ -95,48 +178,45 @@
         </div>
 
 
-        <footer class="page-footer font-small pt-4 mt-3 bg-dark">
-            <!--Footer Links-->
-            <div class="container">
-                <div class="row">
-                    <!--First column-->
-                    <div class="col-6 text-center">
-                        <h6 class="text-light pb-2">Find Carte Blanche on</h6>
-                        <p>
-                            <a href="https://twitter.com/hashtag/restaurant" class="ml-2">
-                                <img src="img/icon_twitter_white.png" width="30" height="30">
-                            </a>
-                            <a href="https://www.instagram.com/explore/tags/restaurant/">
-                                <img src="img/icon_instagram_white.png" width="30" height="30">
-                            </a>
-                        </p>
-                    </div>
-                    <!--/.First column-->
-
-                    <!--Second column-->
-                    <div class="col-6 text-center">
-                        <h6 class="text-light pb-2">Stay updated</h6>
-                        <button class="btn btn-warning mr-2">
-                            Newsletter >
-                        </button>
-                    </div>
-                    <!--/.Second column-->
-                </div>
-
-                <div class="row">
-                    <div class="col-12 py-3 text-center text-light">
-                        &copy; 2018 Copyright: Pega+.org
-                    </div>
-                </div>
+<footer class="page-footer font-small pt-4 mt-3 bg-dark">
+    <!--Footer Links-->
+    <div class="container">
+        <div class="row">
+            <!--First column-->
+            <div class="col-6 text-center">
+                <h6 class="text-light pb-2">Find "Restaurant name" on</h6>
+                <p>
+                    <a href="https://twitter.com/hashtag/restaurant" class="ml-2">
+                        <img src="img/icon_twitter_white.png" width="30" height="30">
+                    </a>
+                    <a href="https://www.instagram.com/explore/tags/restaurant/">
+                        <img src="img/icon_instagram_white.png" width="30" height="30">
+                    </a>
+                </p>
             </div>
-        </footer>
+            <!--/.First column-->
 
+            <!--Second column-->
+            <div class="col-6 text-center">
+                <h6 class="text-light pb-2">Stay updated</h6>
+                <button class="btn btn-warning mr-2">
+                    Newsletter >
+                </button>
+            </div>
+            <!--/.Second column-->
+        </div>
+
+        <div class="row">
+            <div class="col-12 py-3 text-center text-light">
+                &copy; 2018 Copyright: Pega+.org
+            </div>
+        </div>
     </div>
-    <script src="vendor/jquery/dist/jquery.min.js"></script>
-    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
-    <script src="order.js"></script>
+</footer>
+
+</div>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

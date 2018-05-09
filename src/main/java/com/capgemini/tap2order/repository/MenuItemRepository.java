@@ -1,9 +1,0 @@
-package com.capgemini.tap2order.repository;
-
-import com.capgemini.tap2order.model.MenuItem;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface MenuItemRepository extends CrudRepository<MenuItem, Integer> {
-}
