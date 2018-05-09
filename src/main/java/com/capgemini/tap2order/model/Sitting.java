@@ -6,15 +6,21 @@
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
 //import javax.persistence.Id;
+//import java.util.ArrayList;
 //
-//@Data
 //@Entity
-//public class Table {
+//@Data
+//public class Sitting {
 //
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
-//    private int tableId;
-//    private int seatNumber;
-//    private boolean isReserved;
+//    private int id;
+//    private ArrayList<Order> order;
+//    private double price;
+//
+//
 //
 //}
+//
+//
+//
