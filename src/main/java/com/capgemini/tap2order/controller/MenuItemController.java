@@ -57,6 +57,20 @@ public class MenuItemController {
         return menuItemRepository.save(menuItem);
     }
 
+
+//    //TODO: putmapping
+//
+//    @PutMapping(value = "/{id}")
+//    public MenuItem putById(@PathVariable int id, @RequestBody MenuItem menuItem) {
+//        Optional<MenuItem> optionalMenuItem = this.menuItemRepository.findById(id);
+//        if (optionalMenuItem.isPresent()) {
+//            MenuItem updatedMenuItem = optionalMenuItem.get();
+//            updatedMenuItem.setQuantity(menuItem.getQuantity());
+//            return updatedMenuItem;
+//        }
+//        return menuItem;
+//    }
+
 //    @GetMapping("/")
 //    public ArrayList<Ingredient> getAllIngredients()
 //    {return ingredients;}

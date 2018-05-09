@@ -18,5 +18,6 @@ public class MenuItem {
     private int menuItemId;
     private String menuItemName;
     private double menuItemPrice;
+    private int quantity;
 
 }
