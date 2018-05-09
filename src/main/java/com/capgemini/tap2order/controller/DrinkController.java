@@ -30,7 +30,7 @@ public class DrinkController {
     }
 
     @PostMapping("/add")
-    public Drink registerDrinkItem(Drink drink){
+    public Drink registerDrinkItem(@RequestBody Drink drink){
         System.out.println(drink);
         drinkItems.add(drink);
         return drinkItemRepository.save(drink);

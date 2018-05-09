@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/menuItem/")
+@RequestMapping("/api/menuItem")
 public class MenuItemController {
 
     private static ArrayList<MenuItem> menuitems = new ArrayList<>();
@@ -51,7 +51,7 @@ public class MenuItemController {
 //    }
 
     @PostMapping("/add")
-    public MenuItem registerMenuItem(MenuItem menuItem){
+    public MenuItem registerMenuItem(@RequestBody MenuItem menuItem){
         System.out.println(menuItem);
         menuitems.add(menuItem);
         return menuItemRepository.save(menuItem);

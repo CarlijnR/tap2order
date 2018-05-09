@@ -13,8 +13,7 @@
 <body class="bg-dark">
 <div class="bg-light">
     <nav class="navbar navbar-light navbar-expand-lg bg-dark">
-        <a class="navbar-brand text-light">
-            Logo
+        <a href="index.html" class="navbar-brand text-light">
             <img src="img/icon_restaurant_white.png" width="50" height="50">
         </a>
         <button class="btn navbar-toggler bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -24,14 +23,12 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto text-center">
                 <a class="nav-item nav-link text-warning ml-2 mr-2" href=index.html>Home</a>
-                <a class="nav-item nav-link text-warning ml-2 mr-2" href=menu.html>Menu</a>
-                <a class="nav-item nav-link text-warning ml-2 mr-2" href=order.html>My order</a>
-                <a class="nav-item">
-                    <button class="btn btn-dark text-warning ml-2 mr-2">
-                        Call waiter
-                        <img src="img/icon_waiter_white.png" width="20" height="20" ;>
-                    </button>
-                </a>
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=manager.html>Manager Overview</a>
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=managerMenu.html>Manager Menu</a>
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=managerIngredients.html>Ingredients</a>
+                <a class="d-none nav-item nav-link text-warning ml-2 mr-2" href=managerReservations.html>Reservations</a>
+                <a class="d-none nav-item nav-link text-warning ml-2 mr-2" href=managerCurrentOrders.html>Current orders</a>
+                <a class="d-none nav-item nav-link text-warning ml-2 mr-2" href=managerViewStatistics.html">View Statistics</a>
             </div>
         </div>
     </nav>
@@ -116,6 +113,15 @@
     <footer class="page-footer font-small pt-4 mt-3 bg-dark">
         <!--Footer Links-->
         <div class="container">
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="index.html" class="btn btn-secondary text-light">
+                        Log out
+                    </a>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-12 py-3 text-center text-light">
                     &copy; 2018 Copyright: Pega+.org
@@ -128,7 +134,7 @@
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="ingredient.js"></script>
+<script src="managerIngredients.js"></script>
 <script>
     $(document).ready(function () {
         setup();

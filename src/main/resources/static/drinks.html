@@ -6,14 +6,14 @@
         Tap2Order
     </title>
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="bg-dark">
 <div class="bg-light">
     <nav class="navbar navbar-light navbar-expand-lg bg-dark">
-        <a class="navbar-brand text-light">
-            Logo
+        <a href="index.html" class="navbar-brand text-light">
             <img src="img/icon_restaurant_white.png" width="50" height="50">
         </a>
         <button class="btn navbar-toggler bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -37,10 +37,11 @@
 
     <section class="jumbotron text-center text-light">
         <div class="container">
-            <h1 class="jumbotron-heading">Restaurant name</h1>
+            <h1 class="jumbotron-heading">Carte Blanche</h1>
         </div>
     </section>
 
+<<<<<<< HEAD
     <div>
 
         <div class="container">
@@ -67,8 +68,40 @@
                         <img src="img/icon_food.png" width="50" height="50">
                     </a>
                 </div>
+    <div class="container">
+        <div class="row mt-2">
+            <h5 class="mx-auto">Drinks</h5>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table" id="drinksText">
+                    <thead>
+                    <tr>
+                        <th scope="col" width="40%">Name</th>
+                        <th scope="col" width="30%">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
         </div>
+
+        <div class="row">
+            <div class="mx-auto">
+                <a href="food.html" class="btn btn-warning text-dark mr-2">
+                    <h5 class="menufood">Go to Food</h5>
+                    <img src="img/icon_food.png" width="100" height="100">
+                </a>
+                <a href="order.html" class="btn btn-warning text-dark ml-2">
+                    <h5>View Order</h5>
+                    <img src="img/icon_bill.png" width="100" height="100">
+                </a>
+            </div>
+        </div>
+
+
+
     </div>
 
 
@@ -78,7 +111,7 @@
             <div class="row">
                 <!--First column-->
                 <div class="col-6 text-center">
-                    <h6 class="text-light pb-2">Find "Restaurant name" on</h6>
+                    <h6 class="text-light pb-2">Find Carte Blanche on</h6>
                     <p>
                         <a href="https://twitter.com/hashtag/restaurant" class="ml-2">
                             <img src="img/icon_twitter_white.png" width="30" height="30">
@@ -110,8 +143,9 @@
 
 </div>
 <script src="vendor/jquery/dist/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
 <script src="drinks.js"></script>
 
 </body>
