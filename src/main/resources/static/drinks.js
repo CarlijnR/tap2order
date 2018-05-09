@@ -121,7 +121,7 @@ function getDrinkData() {
     });
 }
 
-<<<<<<< HEAD
+
 
 function setup() {
 
@@ -146,12 +146,12 @@ function setup() {
     // Load DataTable with data format.
     $('#drinks').DataTable({
 
-=======
+
 $(document).ready(function () {
         console.log("tadaadrinks");
         var events = $("#events");
         var table = $('#drinksText').DataTable({
->>>>>>> tableCarlijn
+
         columns: [
             { "data": "drinkName" },
             { "data": "drinkPrice" }
