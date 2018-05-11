@@ -8,7 +8,7 @@
  console.log("Order:", dataDrink);
 
  console.log("enters function");
-        if (dataFood !== null)
+        if (dataFood !== null && dataFood!=="")
         {
         for(var i=0; i < dataFood.length; i++){
 
@@ -22,9 +22,8 @@
 
         };
         }
-        if(dataDrink !== null){
+        if(dataDrink !== null && dataDrink!==""){
         for(var i=0; i < dataDrink.length; i++){
-
         $('#table').append(
             '<tr>' +
             '<td class="h5">' + dataDrink[i].drinkName + '</td>' +
