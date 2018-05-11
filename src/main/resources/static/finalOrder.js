@@ -22,7 +22,7 @@
         }
         }
 
-        if(dataDrink !== null){
+        if(dataDrink !== null && dataDrink !==""){
         for(var i=0; i < dataDrink.length; i++){
 
                 $('#table').append(
