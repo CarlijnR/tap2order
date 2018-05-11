@@ -7,8 +7,6 @@
 
  console.log("Order:", dataDrink);
 
- var quantitiesForOrders = [];
-
  console.log("enters function");
 
     for(var i=0; i < dataFood.length; i++){
@@ -20,15 +18,29 @@
             '<td>' + dataFood[i].quantity + '</td>' +
             '</tr>'
         );
-
-
-
 }
+        for(var i=0; i < dataDrink.length; i++){
+
+                $('#table').append(
+                    '<tr>' +
+                    '<td class="h5">' + dataDrink[i].drinkName + '</td>' +
+                    '<td>' + dataDrink[i].drinkPrice + '</td>' +
+                    '<td>' + dataDrink[i].quantity + '</td>' +
+                    '</tr>'
+                );
+
+
+
+};
+
 var totalPrice=0;
 for(var i=0; i < dataFood.length; i++){
 totalPrice = totalPrice + (dataFood[i].menuItemPrice*dataFood[i].quantity);
 }
+for(var i=0; i < dataDrink.length; i++){
+totalPrice = totalPrice + (dataDrink[i].drinkPrice*dataDrink[i].quantity);
 console.log(totalPrice);
+}
 $('#totalPrice').html(totalPrice);
 })
 
