@@ -8,7 +8,7 @@
  console.log("Order:", dataDrink);
 
  console.log("enters function");
-
+    if(dataFood !== null){
     for(var i=0; i < dataFood.length; i++){
 
         $('#table').append(
@@ -18,7 +18,10 @@
             '<td>' + dataFood[i].quantity + '</td>' +
             '</tr>'
         );
-}
+        }
+        }
+
+        if(dataDrink !== null){
         for(var i=0; i < dataDrink.length; i++){
 
                 $('#table').append(
@@ -28,18 +31,20 @@
                     '<td>' + dataDrink[i].quantity + '</td>' +
                     '</tr>'
                 );
-
-
-
-};
+        }
+        }
 
 var totalPrice=0;
+if(dataFood !== null){
 for(var i=0; i < dataFood.length; i++){
 totalPrice = totalPrice + (dataFood[i].menuItemPrice*dataFood[i].quantity);
 }
+}
+if(dataDrink !== null){
 for(var i=0; i < dataDrink.length; i++){
 totalPrice = totalPrice + (dataDrink[i].drinkPrice*dataDrink[i].quantity);
 console.log(totalPrice);
+}
 }
 $('#totalPrice').html(totalPrice);
 })
