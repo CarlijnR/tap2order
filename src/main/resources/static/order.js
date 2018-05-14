@@ -8,30 +8,28 @@
  console.log("Order:", dataDrink);
 
  console.log("enters function");
-        if (dataFood !== null && dataFood!=="")
-        {
+        if (dataFood !== null && dataFood!==""){
         for(var i=0; i < dataFood.length; i++){
-
+        if(dataFood[i]!==null){
         $('#table').append(
             '<tr>' +
             '<td class="h5">' + dataFood[i].menuItemName + '</td>' +
             '<td>' + dataFood[i].menuItemPrice + '</td>' +
             '<td>' + '<input value="1" class="form-control col-md-4" type="number" placeholder="(quantity)" name="dataFood['+i+'].quantity" id="quantity'+i+'">' + '</td>' +
             '</tr>'
-        );
-
+        );}
         };
         }
         if(dataDrink !== null && dataDrink!==""){
         for(var i=0; i < dataDrink.length; i++){
+        if(dataDrink[i]!==null){
         $('#table').append(
             '<tr>' +
             '<td class="h5">' + dataDrink[i].drinkName + '</td>' +
             '<td>' + dataDrink[i].drinkPrice + '</td>' +
             '<td>' + '<input value="1" class="form-control col-md-4" type="number" placeholder="(quantity)" name="dataDrink['+i+'].quantity" id="quantity1'+i+'">' + '</td>' +
             '</tr>'
-        );
-
+        );}
         };
         }
 })
