@@ -18,4 +18,36 @@ public class Drink {
     private double drinkPrice;
     private int quantity;
 
+
+    public int getDrinkId() {
+        return drinkId;
+    }
+
+    public void setDrinkId(int drinkId) {
+        this.drinkId = drinkId;
+    }
+
+    public String getDrinkName() {
+        return drinkName;
+    }
+
+    public void setDrinkName(String drinkName) {
+        this.drinkName = drinkName;
+    }
+
+    public double getDrinkPrice() {
+        return drinkPrice;
+    }
+
+    public void setDrinkPrice(double drinkPrice) {
+        this.drinkPrice = drinkPrice;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }
