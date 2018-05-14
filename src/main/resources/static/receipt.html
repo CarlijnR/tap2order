@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        Tap2Order
+    </title>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-dark">
+<div class="bg-light">
+    <nav class="navbar navbar-light navbar-expand-lg bg-dark">
+        <a href="index.html" class="navbar-brand text-light">
+            <img src="img/icon_restaurant_white.png" width="50" height="50">
+        </a>
+        <button class="btn navbar-toggler bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto text-center">
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=index.html>Home</a>
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=menu.html>Menu</a>
+                <a class="nav-item nav-link text-warning ml-2 mr-2" href=order.html>My order</a>
+                <a class="nav-item">
+                    <button class="btn btn-dark text-warning ml-2 mr-2">
+                        Call waiter
+                        <img src="img/icon_waiter_white.png" width="20" height="20" ;>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="jumbotron text-center text-light">
+        <div class="container">
+            <h1 class="jumbotron-heading">Carte Blanche</h1>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Thank you visiting Carte Blanche</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mt-2">
+                <h6 class="mx-auto">Your order</h6>
+                <table class="table" id="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" width="40%">Name</th>
+                        <th scope="col" width="30%">Price</th>
+                        <th scope="col" width="30%">Quantity</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto mb-3 mt-3">
+                <a href="receipt.html" class="btn btn-warning mt-1 text-dark">
+                    <h6 class="payment">Mail receipt</h6>
+                    <img src="img/icon_bill.png" width="30" height="30">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer font-small pt-4 mt-3 bg-dark">
+        <!--Footer Links-->
+        <div class="container">
+            <div class="row">
+                <!--First column-->
+                <div class="col-6 text-center">
+                    <h6 class="text-light pb-2">Find Carte Blanche on</h6>
+                    <p>
+                        <a href="https://twitter.com/hashtag/restaurant" class="ml-2">
+                            <img src="img/icon_twitter_white.png" width="30" height="30">
+                        </a>
+                        <a href="https://www.instagram.com/explore/tags/restaurant/">
+                            <img src="img/icon_instagram_white.png" width="30" height="30">
+                        </a>
+                    </p>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-6 text-center">
+                    <h6 class="text-light pb-2">Stay updated</h6>
+                    <button class="btn btn-warning mr-2">
+                        Newsletter >
+                    </button>
+                </div>
+                <!--/.Second column-->
+            </div>
+
+            <div class="row">
+                <div class="col-12 py-3 text-center text-light">
+                    &copy; 2018 Copyright: Pega+.org
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+<script src="receipt.js"></script>
+</body>
+
+</html>

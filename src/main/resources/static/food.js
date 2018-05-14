@@ -58,8 +58,8 @@ function setup() {
                      window.sessionStorage.setItem("foodOrderData", JSON.stringify(rowData));
                     });
         getDataFood();
-    });}
-
+    });
+}
 
 //$.get("api/restaurant/menu/list/food", function(data){
 //    for(var i=0; i < data.length;i++){
