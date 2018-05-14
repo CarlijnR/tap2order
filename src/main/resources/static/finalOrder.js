@@ -1,4 +1,9 @@
- $(document).ready(function (){
+ $(document).ready(function(){
+ mainFunction();
+ })
+
+ function mainFunction (){
+ //$('#table td').empty();
  var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
 
  console.log("Order:", dataFood);
@@ -12,6 +17,7 @@
     for(var i=0; i < dataFood.length; i++){
     if(dataFood[i]!==null)
     {
+
         $('#table').append(
             '<tr id="food'+i+'">' +
             '<td class="h5">' + dataFood[i].menuItemName + '</td>' +
@@ -39,7 +45,7 @@
         }
         }
         calculatePrice();
-        })
+        };
 
 function calculatePrice(){
 var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
@@ -62,19 +68,42 @@ $('#totalPrice').html(totalPrice);
 }
 
 function removeFood(i){
+var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
+//var temporary = Number(dataFood[i].quantity);
+if (dataFood[i].quantity>1)
+{
+    dataFood[i].quantity=dataFood[i].quantity-1;
+    calculatePrice();
+    window.sessionStorage.setItem("foodOrderData", JSON.stringify(dataFood));
+    $('#table tbody').empty();
+    mainFunction();
+}
+else{
 $("#food"+i).remove();
 var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
 delete dataFood[i];
 window.sessionStorage.setItem("foodOrderData", JSON.stringify(dataFood));
 calculatePrice();
 }
+}
 
 function removeDrink(i){
+var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
+if(dataDrink[i].quantity>1)
+{
+dataDrink[i].quantity=dataDrink[i].quantity-1;
+    calculatePrice();
+    window.sessionStorage.setItem("drinkOrderData", JSON.stringify(dataDrink));
+    $('#table tbody').empty();
+    mainFunction();
+}
+else{
 $("#drink"+i).remove();
 var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
 delete dataDrink[i];
 window.sessionStorage.setItem("drinkOrderData", JSON.stringify(dataDrink));
 calculatePrice();
+}
 }
 
 //
