@@ -16,14 +16,13 @@ function getDataFood() {
     });
 }
 
-<<<<<<< HEAD
+
 function setup() {
     // Modal submit.
     $("#saveFood").on('submit', function(e) {
         console.log("Submitted new menu item form");
 
-<<<<<<< HEAD
-=======
+
         // Post the data from the modal.
         postData();
 
@@ -31,7 +30,7 @@ function setup() {
         $('#newFoodModal').modal('hide');
         $("#nameMenuItem").val("");
         $("#priceMenuItem").val("");
-=======
+
     $(document).ready(function () {
         console.log("tadaafood");
           var events = $("#events");
@@ -59,9 +58,8 @@ function setup() {
                      window.sessionStorage.setItem("foodOrderData", JSON.stringify(rowData));
                     });
         getDataFood();
->>>>>>> tableCarlijn
-    });
->>>>>>> tableCarlijn
+    });}
+
 
 //$.get("api/restaurant/menu/list/food", function(data){
 //    for(var i=0; i < data.length;i++){
