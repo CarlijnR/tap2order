@@ -4,9 +4,9 @@ function getDataFood() {
 
     // Get the data from endpoint.
     $.ajax({
-        url:"/api/menuItem/",
-        type:"get",
-        success: function(foods) {
+        url: "/api/menuItem/",
+        type: "get",
+        success: function (foods) {
             // On successful get, reload the datatable with new data.
             console.log("This is the data: " + foods);
             $('#menuItem').DataTable().clear();
@@ -19,7 +19,7 @@ function getDataFood() {
 
 function setup() {
     // Modal submit.
-    $("#saveFood").on('submit', function(e) {
+    $("#saveFood").on('submit', function (e) {
         console.log("Submitted new menu item form");
 
 
@@ -31,20 +31,21 @@ function setup() {
         $("#nameMenuItem").val("");
         $("#priceMenuItem").val("");
 
-    $(document).ready(function () {
-        console.log("tadaafood");
-          var events = $("#events");
-          var table = $('#menuItem').DataTable({
+        $(document).ready(function () {
+            console.log("tadaafood");
+            var events = $("#events");
+            var table = $('#menuItem').DataTable({
                 columns: [
-                    { "data": "menuItemName" },
-                    { "data": "menuItemPrice" }
+                    {"data": "menuItemName"},
+                    {"data": "menuItemPrice"}
                 ],
-                select:{ style: 'multi'},
+                select: {style: 'multi'}
             });
 
             table
-                .on ('select.dt', function(e, type){
+                .on('select.dt', function (e, type) {
                     var rowData = table.rows('.selected').data().toArray();
+
                                 console.log("enters rowData function");
                                 events.prepend('<div><b>'+type+' selection</b> - '+JSON.stringify(rowData)+'</div>' );
                                 console.log(rowData);
@@ -58,6 +59,22 @@ function setup() {
                      window.sessionStorage.setItem("foodOrderData", JSON.stringify(rowData));
                     });
         getDataFood();
+
+                    console.log("enters rowData function");
+                    events.prepend('<div><b>' + type + ' selection</b> - ' + JSON.stringify(rowData) + '</div>');
+                    console.log(rowData);
+                    window.sessionStorage.setItem("foodOrderData", JSON.stringify(rowData));
+                })
+                .on('deselect', function (e, dt, type, indexes) {
+                    console.log("enters .on function");
+                    var rowData = table.rows(indexes).data().toArray();
+                    events.prepend('<div><b>' + type + ' <i>de</i>selection</b> - ' + JSON.stringify(rowData) + '</div>');
+                    console.log(rowData);
+                    window.sessionStorage.setItem("foodOrderData", JSON.stringify(rowData));
+                });
+            getDataFood();
+        });
+
     });
 }
 
