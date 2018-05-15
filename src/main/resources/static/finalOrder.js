@@ -65,7 +65,7 @@ console.log(totalPrice);}
 }
 }
 $('#totalPrice').html("Total: &euro; "+totalPrice);
-window.sessionStorage.setItem("totalPrice", JSON.stringify(totalPrice));
+window.sessionStorage.setItem("totalPrice", totalPrice);
 }
 
 function removeFood(i){
@@ -152,7 +152,7 @@ calculatePrice();
 
 function getTip(){
 var tip = $('#tip').val();
-window.sessionStorage.setItem("tip", JSON.stringify(tip));
+window.sessionStorage.setItem("tip", tip);
 }
 
 $("#paymentButton").click(getTip);
