@@ -34,29 +34,53 @@
         }
 })
 
-function updateOrderData() {
+function updateOrderDataFood() {
     var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
-    if (dataFood !== null)
-    {
-    for (var i=0; i<dataFood.length; i++){
+    if(dataFood !== null){
     if(dataFood[i]!==null){
-    var quantity = $('#quantity'+i+'').val();
-    dataFood[i].quantity=quantity;
-    }};
-    console.log(dataFood);
-    window.sessionStorage.setItem("foodOrderData", JSON.stringify(dataFood));
-    }
+    for (var i=0; i<dataFood.length; i++){
+        var quantityFood = $('#quantity'+i+'').val();
+         console.log(quantityFood);
+        if (quantityFood < 1 || quantityFood > 15) {
+            alert("Please input any number above 0");
+            return;
+        }
+        else {
+        dataFood[i].quantity=quantityFood;
+        console.log(dataFood);
+        window.sessionStorage.setItem("foodOrderData", JSON.stringify(dataFood));
+        updateOrderDataDrink();
+        }
 
-    var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
-    if(dataDrink !== null){
-    for (var i=0; i<dataDrink.length; i++){
-    if(dataDrink[i]!==null){
-    var quantity1 = $('#quantity1'+i+'').val();
-    dataDrink[i].quantity=quantity1;
-    }};
-    console.log(dataDrink);
-    window.sessionStorage.setItem("drinkOrderData", JSON.stringify(dataDrink));
+    };
     }
+    else{
+    updateOrderDataDrink();}
+    }
+    else{
+    updateOrderDataDrink();}
 }
 
-$("#quantityButton").click(updateOrderData);
+function updateOrderDataDrink(){
+    var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
+    if(dataDrink !== null){
+    if(dataDrink[i]!==null){
+    for (var i=0; i<dataDrink.length; i++){
+    var quantity1 = $('#quantity1'+i+'').val();
+    console.log(quantity1);
+                        if (quantity1 < 1 || quantity1 > 15) {
+                            alert("Please input any number above 0");
+                            return;
+                        }
+                        else {
+
+                            dataDrink[i].quantity=quantity1;
+                            console.log(dataDrink);
+                            window.sessionStorage.setItem("drinkOrderData", JSON.stringify(dataDrink));
+                            window.location.href="finalOrder.html";
+                        }
+                    }
+}
+}
+}
+$("#quantityButton").click(updateOrderDataFood);
