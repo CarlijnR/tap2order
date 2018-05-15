@@ -35,7 +35,9 @@ $(document).ready(function (){
         );}
         }}
         var finalPrice = JSON.parse(window.sessionStorage.getItem("totalPrice"));
-        var VAT = (finalPrice)*(0.21)
+
+        var temp = (finalPrice)*(0.21);
+        var VAT = temp.toFixed(2);
         if(tip>=0)
         {
         $('#totalPrice').html("Total: &euro;"+(finalPrice+ +tip));
