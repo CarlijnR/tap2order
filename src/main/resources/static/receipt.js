@@ -1,7 +1,7 @@
 $(document).ready(function (){
 
  var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
- var tip = JSON.parse(window.sessionStorage.getItem("tip"));
+ var tip = JSON.parse(window.sessionStorage.getItem(tip));
  console.log("Order:", dataFood);
 
  var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
@@ -40,7 +40,7 @@ $(document).ready(function (){
         var VAT = temp.toFixed(2);
         if(tip>=0)
         {
-        $('#totalPrice').html("Total: &euro;"+(finalPrice+ +tip));
+        $('#totalPrice').html("Total (incl. tips): &euro;"+(finalPrice+ +tip));
         $('#VAT').html("VAT (21%): &euro;"+VAT);
         }
         else

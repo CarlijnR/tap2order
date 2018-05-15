@@ -153,6 +153,7 @@ calculatePrice();
 function getTip(){
 var tip = $('#tip').val();
 window.sessionStorage.setItem("tip", tip);
+window.location.href="receipt.html";
 }
 
 $("#paymentButton").click(getTip);

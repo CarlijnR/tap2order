@@ -37,8 +37,8 @@
 function updateOrderDataFood() {
     var dataFood = JSON.parse(window.sessionStorage.getItem("foodOrderData"));
     if(dataFood !== null){
-    if(dataFood[i]!==null){
     for (var i=0; i<dataFood.length; i++){
+    if(dataFood[i]!==null){
         var quantityFood = $('#quantity'+i+'').val();
          console.log(quantityFood);
         if (quantityFood < 1 || quantityFood > 15) {
@@ -51,10 +51,8 @@ function updateOrderDataFood() {
         window.sessionStorage.setItem("foodOrderData", JSON.stringify(dataFood));
         updateOrderDataDrink();
         }
-
-    };
     }
-    else{
+    else
     updateOrderDataDrink();}
     }
     else{
@@ -64,8 +62,8 @@ function updateOrderDataFood() {
 function updateOrderDataDrink(){
     var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
     if(dataDrink !== null){
-    if(dataDrink[i]!==null){
     for (var i=0; i<dataDrink.length; i++){
+    if(dataDrink[i]!==null){
     var quantity1 = $('#quantity1'+i+'').val();
     console.log(quantity1);
                         if (quantity1 < 1 || quantity1 > 15) {
@@ -82,5 +80,6 @@ function updateOrderDataDrink(){
                     }
 }
 }
+window.location.href="finalOrder.html";
 }
 $("#quantityButton").click(updateOrderDataFood);
