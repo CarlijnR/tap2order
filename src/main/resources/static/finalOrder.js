@@ -64,7 +64,8 @@ totalPrice = totalPrice + (dataDrink[i].drinkPrice*dataDrink[i].quantity);
 console.log(totalPrice);}
 }
 }
-$('#totalPrice').html(totalPrice);
+$('#totalPrice').html("Total: &euro; "+totalPrice);
+window.sessionStorage.setItem("totalPrice", JSON.stringify(totalPrice));
 }
 
 function removeFood(i){
@@ -148,4 +149,10 @@ calculatePrice();
 //    console.log(dataFood);
 //    window.sessionStorage.setItem("foodOrderData", JSON.stringify(dataFood));
 //}
-//$("#quantityButton").click(updateOrderData);
+
+function getTip(){
+var tip = $('#tip').val();
+window.sessionStorage.setItem("tip", JSON.stringify(tip));
+}
+
+$("#paymentButton").click(getTip);
