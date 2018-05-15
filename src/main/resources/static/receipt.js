@@ -9,9 +9,9 @@ $(document).ready(function (){
  console.log("Order:", dataDrink);
 
  console.log("enters function");
-
-    for(var i=0; i < dataFood.length; i++){
-
+        if (dataFood !== null && dataFood!==""){
+        for(var i=0; i < dataFood.length; i++){
+        if(dataFood[i]!==null){
         $('#table').append(
             '<tr>' +
             '<td class="h5">' + dataFood[i].menuItemName + '</td>' +
@@ -20,8 +20,10 @@ $(document).ready(function (){
             '<td>' + dataFood[i].menuItemPrice*dataFood[i].quantity + '</td>' +
             '</tr>'
         );}
-
-        for(var i=0; i < dataDrink.length; i++){
+        }}
+               if(dataDrink !== null && dataDrink!==""){
+               for(var i=0; i < dataDrink.length; i++){
+               if(dataDrink[i]!==null){
 
                 $('#table').append(
                     '<tr>' +
@@ -31,6 +33,7 @@ $(document).ready(function (){
                     '<td>' + dataDrink[i].drinkPrice*dataDrink[i].quantity + '</td>' +
                     '</tr>'
         );}
+        }}
         var finalPrice = JSON.parse(window.sessionStorage.getItem("totalPrice"));
         var VAT = (finalPrice)*(0.21)
         if(tip>=0)

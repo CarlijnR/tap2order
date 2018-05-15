@@ -39,9 +39,10 @@ function updateOrderData() {
     if (dataFood !== null)
     {
     for (var i=0; i<dataFood.length; i++){
+    if(dataFood[i]!==null){
     var quantity = $('#quantity'+i+'').val();
     dataFood[i].quantity=quantity;
-    };
+    }};
     console.log(dataFood);
     window.sessionStorage.setItem("foodOrderData", JSON.stringify(dataFood));
     }
@@ -49,9 +50,10 @@ function updateOrderData() {
     var dataDrink = JSON.parse(window.sessionStorage.getItem("drinkOrderData"));
     if(dataDrink !== null){
     for (var i=0; i<dataDrink.length; i++){
+    if(dataDrink[i]!==null){
     var quantity1 = $('#quantity1'+i+'').val();
     dataDrink[i].quantity=quantity1;
-    };
+    }};
     console.log(dataDrink);
     window.sessionStorage.setItem("drinkOrderData", JSON.stringify(dataDrink));
     }
