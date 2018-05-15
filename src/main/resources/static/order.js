@@ -15,7 +15,7 @@
             '<tr>' +
             '<td class="h5">' + dataFood[i].menuItemName + '</td>' +
             '<td>' + dataFood[i].menuItemPrice + '</td>' +
-            '<td>' + '<input value="1" class="form-control col-md-4" type="number" placeholder="(quantity)" name="dataFood['+i+'].quantity" id="quantity'+i+'">' + '</td>' +
+            '<td>' + '<input min="1" value = "1" class="form-control col-md-4" type="number" placeholder="(quantity)" name="dataFood['+i+'].quantity" id="quantity'+i+'">' + '</td>' +
             '</tr>'
         );}
         };
@@ -27,7 +27,7 @@
             '<tr>' +
             '<td class="h5">' + dataDrink[i].drinkName + '</td>' +
             '<td>' + dataDrink[i].drinkPrice + '</td>' +
-            '<td>' + '<input value="1" class="form-control col-md-4" type="number" placeholder="(quantity)" name="dataDrink['+i+'].quantity" id="quantity1'+i+'">' + '</td>' +
+            '<td>' + '<input min ="1" value="1" class="form-control col-md-4" type="number" placeholder="(quantity)" name="dataDrink['+i+'].quantity" id="quantity1'+i+'">' + '</td>' +
             '</tr>'
         );}
         };
