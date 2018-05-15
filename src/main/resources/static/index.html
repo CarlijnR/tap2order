@@ -105,7 +105,7 @@
 
             <div id="id01" class="modal">
 
-                <form class="modal-content animate" action="manager.html">
+                <form class="modal-content animate" onsubmit="return validate()">
                     <div class="imgcontainer">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close"
                                   title="Close Modal">&times;</span>
@@ -114,10 +114,10 @@
 
                     <div class="container">
                         <label><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <input type="text" placeholder="Enter Username" id="username" required>
 
                         <label><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <input type="password" placeholder="Enter Password" id="password" required>
 
                         <button id="button-popup" type="submit">Login</button>
                         <label>

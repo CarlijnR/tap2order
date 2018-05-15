@@ -8,9 +8,9 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+//btn.onclick = function() {
+//    modal.style.display = "block";
+//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -23,3 +23,17 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username === "admin" && password === "admin"){
+alert ("Login successfully");
+window.location.href = 'manager.html';
+  }
+  else{
+    alert("Invalid username or password");
+    window.location.href = 'index.html';
+    }
+  return false;
+  }
