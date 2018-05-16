@@ -20,4 +20,39 @@ public class MenuItem {
     private double menuItemPrice;
     private int quantity;
 
+
+    public MenuItem() {
+    }
+
+    public int getMenuItemId() {
+        return menuItemId;
+    }
+
+    public void setMenuItemId(int menuItemId) {
+        this.menuItemId = menuItemId;
+    }
+
+    public String getMenuItemName() {
+        return menuItemName;
+    }
+
+    public void setMenuItemName(String menuItemName) {
+        this.menuItemName = menuItemName;
+    }
+
+    public double getMenuItemPrice() {
+        return menuItemPrice;
+    }
+
+    public void setMenuItemPrice(double menuItemPrice) {
+        this.menuItemPrice = menuItemPrice;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }

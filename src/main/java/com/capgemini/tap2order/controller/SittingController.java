@@ -44,13 +44,7 @@
 //    }
 //
 //
-////functionality
-//
-//    //public int calculatPrice()
-//
-//    //public void pay()
-//
-//    //public void reserveTable()
+
 //
 //
 //}

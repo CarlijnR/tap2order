@@ -37,20 +37,6 @@ public class IngredientController {
     }
 
 
-//    @GetMapping("/add/{name}/{grams}/{price}")
-//    public Ingredient addIngredient(@PathVariable String name, @PathVariable int grams,@PathVariable double price){
-//        Ingredient ingredient = new Ingredient();
-//        ingredient.setIngredientName(name);
-//        ingredient.setIngredientGrams(grams);
-//        ingredient.setIngredientPrice(price);
-//
-//    }
-//
-//    @GetMapping("/remove/{id}")
-//    public void removeIngredient(@PathVariable int id){
-//        ingredientRepository.deleteById(id);
-//    }
-
     @PostMapping("/add")
     public Ingredient registerIngredient(@RequestBody Ingredient ingredient){
         System.out.println(ingredient);
@@ -58,9 +44,7 @@ public class IngredientController {
         return ingredientRepository.save(ingredient);
     }
 
-//    @GetMapping("/")
-//    public ArrayList<Ingredient> getAllIngredients()
-//    {return ingredients;}
+
 }
 
 

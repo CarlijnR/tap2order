@@ -9,11 +9,7 @@ public class Menu {
 
     private static ArrayList<MenuItem> menuItemList = new ArrayList<>();
 
-    //constructor: a menu requires a list of MenuItem
-
-    public Menu(ArrayList<MenuItem> menuItemList ){
-
-        this.menuItemList = menuItemList;
+    public Menu() {
     }
 
     public static ArrayList<MenuItem> getMenuItemList() {
